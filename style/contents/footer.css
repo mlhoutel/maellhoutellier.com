@@ -1,0 +1,31 @@
+footer {
+	height: 200px;
+	width: 100vw;
+	background-color: #1F272D;
+	position: fixed;
+	bottom: 0px;
+	z-index: -10;
+}
+
+footer p {
+	font-family: RobotoBold;
+	font-size: 1.2em;
+	white-space: nowrap;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;  
+	transform: translate(-50%, -50%);
+	color: #F4F0EB;
+}
+
+/*--------------------------------------------------------------------*/
+/*                       All : width < 640px                          */
+/*--------------------------------------------------------------------*/
+@media only screen and (max-width: 640px) {
+
+	footer p {
+		font-size: 0.8em;
+		white-space: nowrap;
+	}
+}

@@ -1,0 +1,95 @@
+/*--------------------------------------------------------------------*/
+/*                             GLOBAL                                 */
+/*--------------------------------------------------------------------*/
+
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: RobotoLight;
+}
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    cursor: url("https://img.icons8.com/ios-glyphs/30/000000/cursor.png"), auto;
+}
+
+/*
+html::-webkit-scrollbar { width: 0 !important }
+html { overflow: -moz-scrollbars-none; }
+html { -ms-overflow-style: none; }
+
+*/
+/*--------------------------------------------------------------------*/
+/*                           COLOR PALETTE                            */
+/*--------------------------------------------------------------------*/
+/*
+	BLACK : #1F272D 
+    LIGHT BLACK: #24313A;
+	BLUE : #124559 
+	LIGHT BLUE : #598392
+	WHITE : #F4F0EB 
+	BROWN : #C6AC8F;
+    LIGHT BROWN : #E2D0BE;
+    ORANGE : #FFB528;
+*/
+
+/*--------------------------------------------------------------------*/
+/*                                 FONTS                              */
+/*--------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('fonts/Roboto/roboto-light-webfont.woff2') format('woff2'),
+         url('fonts/Roboto/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('fonts/Roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('fonts/Roboto/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoRegularItalic';
+    src: url('fonts/Roboto/roboto-italic-webfont.woff2') format('woff2'),
+         url('fonts/Roboto/roboto-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('fonts/Roboto/roboto-medium-webfont.woff2') format('woff2'),
+         url('fonts/Roboto/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMediumItalic';
+    src: url('fonts/Roboto/roboto-mediumitalic-webfont.woff2') format('woff2'),
+         url('fonts/Roboto/roboto-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('fonts/Roboto/roboto-bold-webfont.woff2') format('woff2'),
+         url('fonts/Roboto/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+

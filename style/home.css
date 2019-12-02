@@ -1,0 +1,552 @@
+/*--------------------------------------------------------------------*/
+/*              Home page bar : Title, Style and NavBar               */
+/*--------------------------------------------------------------------*/
+
+/*----------------------- Home page bar Global -----------------------*/
+
+#home {
+	height: 100vh;
+	background-image: url("../images/switchbackground.png");
+	background-size: cover;
+}
+
+#home-bar {
+	height: 70px;
+}
+
+
+#home-bar div,#home-bar nav {
+	display: inline-block;
+}
+
+/*------------ Home page bar First part : Title and Style ------------*/
+#home-content {
+	position: absolute;
+	top: 0px;
+	width: 300px;
+	height: 70px;
+	overflow: hidden;
+	z-index: 43;
+}
+
+#home-content-background {
+	background-color: #FFB528;
+
+	width: 300px;
+	height: 300px;
+	transform: rotate(-15deg)translateX(2%)translateY(-15%);
+}
+
+#home-content-title , #rect-bar {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+}
+
+#home-content-title {
+	color: #1F272D ;
+	font-family: RobotoBold;
+	transition: 0.3s ease;
+
+	font-size: 1.8em;
+	left: 10px;
+}
+
+#home-content-name {
+	color: #1F272D ;
+	font-family: RobotoRegularItalic;
+	transition: 0.3s ease;
+
+	position: absolute;
+	font-size: 1.6em;
+
+	top: -100px;
+	left: 10px;
+
+	z-index: 100;
+
+}
+
+#home-content:hover #home-content-background{
+	background-color: #C6AC8F;
+	transition: 0.4s ease;
+}
+
+#home-content:hover #home-content-title{
+	font-size:1.9em;
+	color: #F4F0EB;
+	transition: 0.4s ease;
+
+	top: 100px;
+	left: 5px;
+}
+
+#home-content:hover #home-content-name{
+	top: 50%;
+	-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	transition: 0.5s ease;
+}
+
+#rect-bar {
+	background-color: #F4F0EB;
+
+	left: 248px;
+	height: 45px;
+	width: 4px;
+}
+
+/*--------------- Home page bar Second part : NavBar ----------------*/
+
+#home-navbar-background {
+	background-color: #124559;
+
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	z-index: 41;
+}
+
+#home-navbar {
+	z-index: 50;
+}
+
+#home-navbar ul {
+	background-color: #1F272D;
+
+	list-style-type: none;
+	overflow: hidden;
+	z-index: 50;
+	top: 23px;
+	left: 284px;
+	position: absolute;
+	height: 47px;
+
+	-moz-transform: skew(15deg, 0deg);
+	-webkit-transform: skew(15deg, 0deg);
+	-o-transform: skew(15deg, 0deg);
+	-ms-transform: skew(15deg, 0deg);
+	transform: skew(15deg, 0deg);
+}
+
+#home-navbar ul li {
+	float: left;
+	width:calc(16.67vw - 60px);
+}
+
+#home-navbar ul li a {
+	color: #F4F0EB;
+	font-family: RobotoRegularItalic;
+	transition: 0.1s ease;
+
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 16px;
+	
+}
+
+#home-navbar ul li a:hover{
+
+	background-color: #24313A;
+	color: #C6AC8F;
+	font-size: 1.4em;
+	transition: 0.1s ease;
+
+	padding: 8px 12px;
+}
+
+
+/*--------------------------------------------------------------------*/
+/*             Home page switch : SwitchMenu and HomeDiv              */
+/*--------------------------------------------------------------------*/
+
+/*---------------------- Home page switch Global ---------------------*/
+#switch {
+	padding: 0px;
+	height: 80vh;
+}
+
+#switch-menu, #switch-content, #menu-grip {
+	position: absolute;
+	vertical-align: top;
+	height: 80vh;
+}
+
+.animated {
+	transition: all 0.4s cubic-bezier(.37,1.03,.46,1.13);
+}
+
+/*------------- Home page switch First part : SwitchMenu -------------*/
+#switch-menu {
+	width: 50vh;
+	z-index: 42;
+}
+
+#menu-background {
+	background-color:#598392;
+	cursor: pointer;
+
+	width: 50vh;
+	height: 80vh;
+	z-index: 42;
+}
+
+#menu-grip {
+	overflow: hidden;
+	height: 80vh;
+	width: 45vh;
+	left: 50vh;
+}
+
+#menu-grip div {
+	background-color:#598392;
+	cursor: pointer;
+
+	position: absolute;
+	width: 56.6vh;
+	height: 56.6vh;
+	transform: rotate(135deg)translateX(50%)translateY(21%);	
+}
+
+#menu-content {
+	position: absolute;
+	left: 15vh;
+}
+
+#switch-menu div {
+	display: block;
+}
+
+.switch-menu-open {
+	left: -5vh;
+}
+
+.switch-menu-close {
+	left:-40vh;
+}
+
+#flags {
+	display: table;
+}
+
+.flag {
+	display: table-row;
+	width: 90px;
+	height: 90px;
+	padding: 10px;
+}
+
+.flag img{
+
+	width: 100%;
+	height: 100%;
+}
+
+/*-------------- Home page switch Second part : HomeDiv --------------*/
+#switch-content {
+	z-index: 41;
+	width: 200vh;
+
+}
+
+.switch-content-open {
+	left:40vh;
+}
+
+.switch-content-close {
+	left: 0px;
+}
+
+#div-home-background {
+	position: absolute;
+	overflow: hidden;
+	width: 100vw;
+	height: 90vh;
+	left: 30vw;
+	transition: none;
+}
+
+#div-home-background div {
+	background-color: #F4F0EB;
+
+	position: absolute;
+	width: 100vw;
+	height: 200vh;
+	left: 30vw;
+	transform: rotate(-10deg)translateX(-5%)translateY(-20%);
+}
+
+#div-home {
+	position: absolute;
+	left: 55vw;
+	top: 10vh;
+	width: 80vh;
+	height: 100%;
+	overflow: hidden;
+}
+
+#div-home h2 {
+	margin-top: 10px;
+	font-family: RobotoMedium;
+	font-size: 1.8em;
+	text-shadow: 60px -12px #C6AC8F;
+}
+
+#presentation1, #presentation2 {
+	display: inline-block;
+	font-family: RobotoBold;
+}
+
+#presentation1 {
+	font-size: 5em;
+	color: #ff9b2d;
+	text-shadow:
+	0 1px 0 #feb667, 
+	0 2px 0 #e8a75f,
+	0 3px 0 #cd9353,
+	0 4px 0 #a37847,
+	0 5px 0 #5f462a,
+
+	0 6px 1px rgba(0,0,0,.1),
+	0 0 5px rgba(0,0,0,.1),
+	0 1px 3px rgba(0,0,0,.3),
+	0 3px 5px rgba(0,0,0,.2),
+	0 5px 10px rgba(0,0,0,.25),
+	0 10px 10px rgba(0,0,0,.1);
+}
+
+#presentation2 {
+	font-size: 1.8em;
+	margin: 10px;
+	text-shadow: 
+	0 1px 0 #ccc, 
+	0 2px 0 #c9c9c9,
+	0 3px 0 #bbb,
+	0 4px 0 #b9b9b9,
+	0 5px 0 #aaa,
+	0 6px 1px rgba(0,0,0,.1),
+	0 0 5px rgba(0,0,0,.1),
+	0 1px 3px rgba(0,0,0,.3),
+	0 3px 5px rgba(0,0,0,.2),
+	0 5px 10px rgba(0,0,0,.25),
+	0 10px 10px rgba(0,0,0,.1);
+
+}
+
+#presentation3 {
+	margin-right: 20px;
+	margin-bottom: 10px;
+
+	padding-right: 10px;
+	padding-left: 10px;
+
+	font-size: 1.2em;
+	font-family: RobotoMediumItalic;
+	text-align: justify;
+    text-align-last: center;
+}
+
+#div-cv {
+	width: auto;
+	padding: 10px 0;
+	text-align: center;
+}
+
+#cvlink {
+	color: #F4F0EB;
+	padding: 10px;
+	background-color: #1F272D;
+	border-radius: 20px;
+	text-decoration:none;
+}
+
+#div-home p {
+	
+}
+
+
+
+
+/*-------------- Home page switch : Next --------------*/
+
+#home-next {
+	background-color: #FFB528;
+	cursor: pointer;
+	transition: background-color 0.5s ease;
+
+	width: 100vw;
+	height:calc(20vh - 60px);
+	position: absolute;
+  	left: 0px;
+  	bottom: -5px;
+  	
+  	z-index: 65;
+}
+
+#home-next-button {
+	font-size: 1.4em;
+	transition: background-color 0.5s ease, font-size 0.5s ease, text-shadow 0.5s ease;
+
+	z-index: 42;
+	position: absolute;
+
+  	left: 50%; 	
+	bottom: 50%;
+  	-ms-transform: translateX(-50%) translateY(50%);
+		transform: translateX(-50%) translateY(50%);
+
+
+}
+
+#home-next:hover {
+	background-color: #C6AC8F;
+	transition: background-color 0.5s ease;
+}
+
+#home-next:hover #home-next-button{
+	font-family: RobotoMedium;
+	font-size: 2em;
+
+	transition: background-color 0.5s ease, font-size 0.5s ease, text-shadow 0.5s ease;
+	text-shadow: 50px 0px #F4F0EB, -50px 0px #F4F0EB;
+}
+
+/*--------------------------------------------------------------------*/
+/*                       All : width < 1050px                         */
+/*--------------------------------------------------------------------*/
+@media only screen and (max-width: 1050px) {
+
+	#home-navbar ul li a {
+		display: none;
+	}
+
+	#switch-menu {
+		display: none;
+	}
+
+	.switch-content-open {
+		left: 0px;
+	}
+
+	#switch-content {
+		width: 100vw;
+		height: calc(100vh - 130px);
+		overflow: hidden;
+	}
+
+	#switch-content div {
+		width: 100vw;
+		top: 100px;
+		left: 0px;
+		transform: rotate(0deg)translateX(0%)translateY(0%);
+	}
+
+	#div-home {
+		position: absolute;
+		left: 0px;
+		padding: 100px 10px 0px 10px;
+	}
+}
+
+
+/*--------------------------------------------------------------------*/
+/*                       All : height < 800 px                         */
+/*--------------------------------------------------------------------*/
+@media only screen and (max-height: 800px) {
+
+	#div-home h2 {
+		font-size: 1.4em;
+	}
+
+	#presentation1 {
+		margin-top: -10px;
+		font-size: 2.6em;
+	}
+
+	#presentation2 {
+		margin-top: 0px;
+		font-size: 1.4em;
+	}
+
+	#presentation3 {
+		margin-top: 0px;
+		font-size: 1em;
+	}
+}
+
+/*--------------------------------------------------------------------*/
+/*                       All : height < 625 px                         */
+/*--------------------------------------------------------------------*/
+@media only screen and (max-height: 625px) {
+
+	/*------------- Home page switch First part : SwitchMenu -------------*/
+	#switch-menu {
+		width: 312.5px;
+		background-color: black;
+	}
+
+	#menu-background {
+		width: 312.5px;
+		height: 500px;
+	}
+
+	#menu-grip {
+		height: 500px;
+		width: 250px;
+		left: 312.5px;
+	}
+
+	#menu-grip div {
+		width: 354.125px;
+		height: 354.125px;
+	}
+
+	#menu-content {
+		left: 93.75px;
+	}
+
+	.switch-menu-open {
+		left: -32.25px;
+	}
+
+	.switch-menu-close {
+		left:-250px;
+	}
+
+	/*-------------- Home page switch Second part : HomeDiv --------------*/
+
+	.switch-content-open {
+		left: 217.75px;
+	}
+
+	#div-home-background {
+		height: 500px;
+	}
+
+	#div-home-background div {
+		height: 1450px;
+	}
+
+	#div-home {
+		top: 62.5px;
+		width: 500px;
+	}
+
+	#home-next {
+		height: 67.5px;
+		position: absolute;
+		top: 570px;
+	}
+
+	#switch-content {
+		height: 505px;
+	}
+
+	#home {
+		height: 620px;
+	}
+}
+

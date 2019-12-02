@@ -1,0 +1,132 @@
+#div-about {
+	background-color: #F4F0EB;
+}
+
+#div-about h1 {
+	font-family: RobotoMedium;
+	font-size: 3em;
+	border-bottom: 2px solid #FFB528;
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+#about-table {
+	padding-left: 40px;
+	display: table;
+    table-layout: fixed;
+    margin-right: 60px;
+}
+
+#about-table div {
+	display: table-cell;
+}
+
+#about-image {
+
+	width: 40%;
+	background-color: #FFB528;
+	padding: 20px;
+
+
+	border-radius: 25px 0px 25px 0px;
+	border-right: 20px solid #1F272D;
+}
+
+#image-div {
+	margin-left: 5%;
+}
+
+#image-div img {
+	width: 100%;
+	margin: 0px;
+	height: auto;
+	border-radius: 20px;
+}
+
+#image-div legend {
+	font-family: RobotoRegularItalic;
+	font-size: 0.8em;
+}
+
+#about-image h2 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+
+	font-family: RobotoMedium; 
+	font-size: 2em;
+
+	border-bottom: 2px solid #1F272D;
+}
+
+#about-image p {
+	font-size: 1.3em;
+}
+
+#about-content {
+    vertical-align: middle;
+	width: 70vw;
+	padding: 20px 40px 20px;
+	
+}
+
+#about-content h2 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+	font-family: RobotoMedium;
+	font-size: 2em;
+}
+
+#about-content p {
+	font-size: 1.2em;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border-left: 2px solid black;
+	text-align: justify;
+}
+
+#about-content ul {
+	list-style: none;
+	padding-left: 20px;
+}
+
+#about-content ul li {
+	font-size: 1.2em;
+	padding: 5px;
+	transition: padding 0.5s ease;
+}
+
+#about-content ul li:hover {
+	padding-left: 40px;
+}
+
+#about-content ul li i {
+	font-size: 1.6em;
+	color: #FFB528;
+}
+/*--------------------------------------------------------------------*/
+/*                       All : width < 1050px                         */
+/*--------------------------------------------------------------------*/
+@media only screen and (max-width: 1050px) {
+	#div-about {
+		padding: 20px 20px 20px;
+	}
+
+	#about-table { 
+		padding-left: 0px;
+	}
+
+	#about-table div {
+		display: block;
+		
+	}
+
+	#about-image {
+		width: 90%;
+		height: auto;
+		padding: 20px;
+	}
+
+	#about-content {
+		padding: 20px;
+	}
+}

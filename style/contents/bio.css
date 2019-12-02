@@ -1,0 +1,126 @@
+#div-bio {
+	background-color: #E2D0BE;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	padding-left: 40px;
+}
+
+#div-bio h1 {
+	font-family: RobotoMedium;
+	font-size: 3em;
+	border-bottom: 2px solid #FFB528;
+	width: 90%;
+	margin: 30px;
+}
+
+#bio-table {
+	display: table;
+    table-layout: fixed;
+}
+
+#bio-table div {
+	display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+#bio-table div h2 {
+	font-family: RobotoRegularItalic;
+	padding-bottom: 20px;
+
+	font-size: 2em;
+	text-shadow: 5px 5px #F4F0EB;
+}
+
+#bio-studies {
+	padding: 20px;
+}
+
+#bio-studies ul {
+	list-style: none;
+}
+
+#bio-studies svg {
+	position: absolute;
+	left: 30px;
+}
+
+#bio-studies ul li h3 {
+	font-family: RobotoRegularItalic;
+	font-size: 1.2em;
+
+	padding-left: 15px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+
+	border-left: 6px solid #1F272D;
+	margin-left: -18px;
+}
+
+#bio-studies ul li p{
+	margin-left: -18px;
+	padding-left: 30px;
+	border-left: 6px solid #1F272D;
+}
+
+#bio-jobs {
+	padding: 20px;
+}
+
+
+#bio-jobs ul {
+	list-style: none;
+}
+
+#bio-jobs svg {
+	position: absolute;
+	transform: translateX(-30px)
+}
+
+#bio-jobs ul li h3 {
+	font-family: RobotoRegularItalic;
+	font-size: 1.2em;
+
+	padding-left: 15px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+
+	border-left: 6px solid #1F272D;
+	margin-left: -18px;
+}
+
+#bio-jobs ul li p{
+	margin-left: -18px;
+	padding-left: 30px;
+	border-left: 6px solid #1F272D;
+}
+
+/*--------------------------------------------------------------------*/
+/*                       All : width < 1050px                          */
+/*--------------------------------------------------------------------*/
+@media only screen and (max-width: 1050px) {
+	#div-bio {
+		padding: 20px 20px 20px;
+	}
+
+	#bio-table div {
+		width: auto;
+		display: block;
+	}
+	
+	#bio-studies {
+	}
+
+	#bio-jobs {
+	}
+
+	#bio-jobs svg {
+		transform: translateX(0px)
+	}
+
+	#bio-jobs svg, #bio-studies svg {
+		left: 10px;
+	}
+
+
+}
