@@ -65,37 +65,37 @@
 }
 
 #project1 {
-	background: url("../../images/DashRaider4.PNG");
+	background: url("../../images/DashRaider4.png");
 	background-size: cover;
 	background-position: center;
 }
 
 #project2 {
-	background: url("../../images/ChromaBlast4.PNG");
+	background: url("../../images/ChromaBlast4.png");
 	background-size: cover;
 	background-position: center;
 }
 
 #project3 {
-	background: url("../../images/Brochure1.PNG");
+	background: url("../../images/Brochure1.png");
 	background-size: cover;
 	background-position: center;
 }
 
 #project4 {
-	background: url("../../images/Genetic2.PNG");
+	background: url("../../images/Genetic2.png");
 	background-size: cover;
 	background-position: center;
 }
 
 #project5 {
-	background: url("../../images/FractaleJulia.PNG");
+	background: url("../../images/FractaleJulia.png");
 	background-size: cover;
 	background-position: center;
 }
 
 #project6 {
-	background: url("../../images/Conways1.PNG");
+	background: url("../../images/Conways1.png");
 	background-size: cover;
 	background-position: center;
 }
@@ -352,6 +352,10 @@
 		background-color: transparent;
 		color: #FFB528;
 		font-size: 3em;
+	}
+
+	#buttonright:hover ,#buttonleft:hover {
+		background-color: transparent;
 	}
 
 	.projecttext {

@@ -64,7 +64,7 @@
 	height: 800px;
 	width: auto;
 	overflow: hidden;
-	background: url("../../images/code.jpg");
+	background: url("../../images/Code.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -155,11 +155,16 @@
 }
 
 #skills-global {
+	margin-top: 20px;
 	height: 400px;
 	padding: 20px;
 	background: url("../../images/Console.png");
 	background-size: cover;
 	background-position: top;
+}
+
+#skills-global h2 {
+	margin-top: -40px;
 }
 
 #skills-global ul {

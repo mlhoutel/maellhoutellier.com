@@ -1,8 +1,7 @@
-
+//Wait the page load
 document.addEventListener("DOMContentLoaded", function(){
 
-    console.log("test")  
-
+    //Switch Menu Vars
     let statusSwitch = false
     let switchMenu = document.getElementById("switch-menu")
     let switchContent = document.getElementById("switch-content")
@@ -11,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function(){
     let grip = document.getElementById("grip")
     let menuBackground = document.getElementById("menu-background")
 
-    let menuArray = [grip,menuBackground]//,switchContent]
-
+    let menuArray = [grip,menuBackground]
     let content = document.getElementById("content")
 
+    //Links Auto scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -33,31 +32,8 @@ document.addEventListener("DOMContentLoaded", function(){
             }); 
         });
     });
-
-    /*
-    document.addEventListener('wheel',function (event){
-        //only vertical scroll
-        if (event.deltaY > 0)
-        {
-            event.preventDefault();
-            smoothScroll(document.documentElement,100,1000)
-        }
-    })
-
-    function smoothScroll (domElement,pixel,delay)
-    {
-        const intervalToRepeat = 25;
-        const step = (intervalToRepeat * pixel) / delay;
-        if ( step < pixel)
-        {
-            domElement.scrollTop += step;
-            setTimeout(function (){
-                smoothScroll(domElement,pixel - step,delay)
-            },intervalToRepeat);
-        }
-    }
-    */
     
+    //SrollTopButton auto Scroll
     let scrollstop = document.getElementsByClassName("scroll-top-button")
 
     for (let scrolltop of scrollstop)
@@ -72,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function(){
         });  
     }
     
-
+    //Unlock the website after the Home page
     document.getElementById("home-next").addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -84,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     });
 
+    //Menu slider
     menuArray.forEach( function (elem)
     {
         elem.addEventListener('click', function () {
@@ -118,23 +95,24 @@ document.addEventListener("DOMContentLoaded", function(){
 
                 setTimeout(function() {
                     statusSwitch = false
-                    //switchMenu.classList.remove('animated')
-                    //switchContent.classList.remove('animated')
                 }, 300);
             }
             
         })
     })
 
+    //Add the transition effect only when the Slider open/close
     switchContent.addEventListener('transitionend', function(event) {
         switchMenu.classList.remove('animated')
         switchContent.classList.remove('animated')
     }, false );
 
 
+    //Burger responsive navbar vars
     let burger = document.getElementById('burger')
     let navbar = document.getElementById("navbar")
 
+    //Activate the responsive navbar
     burger.addEventListener('click', function() {
         burger.classList.toggle('active')
         burger.classList.toggle('not-active')
@@ -143,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function(){
         navbar.classList.toggle("navbar-unactive")
     });
 
+    //Activate the navbar elements
     for(let d of document.getElementsByClassName("navbar-responsive"))
     {
         d.addEventListener('click',function(){
@@ -154,13 +133,13 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     }
 
-
-
+    //Skill tab selector
     let skillselects = document.querySelectorAll("#skills-select h3")
     let skillcontents = document.querySelectorAll(".skill-content")
 
     selectskill(document.getElementById('select-code'))
 
+    //Activate a skill tab
     for (let skillselect of skillselects)
     {
         skillselect.addEventListener("click", function(){
@@ -168,6 +147,8 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     }
 
+
+    //Select a skillpage from the skill tabs and update skill-rings
     function selectskill(select)
     {
         let content = document.getElementById(select.id.replace('select-','content-'))
@@ -243,8 +224,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
-    //Console:
-
+    //Console part
     let consolelines = document.querySelectorAll(".global-listskill li")
 
     for (let consoleline of consolelines)
@@ -267,41 +247,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     },9000)
 
-
-    /*
-    let skillbars = document.querySelectorAll(".skillbar")
-    let globalskills = document.querySelectorAll(".globalskill")
-    let skilllanguages = document.getElementById('skilllanguages')
-
-    for (let skillbar of skillbars)
-    {
-        skillbar.style.width = skillbar.innerText;
-    }
-
-    for (let globalskill of globalskills)
-    {
-        globalskill.querySelector("div").classList.add("skillHide")
-        
-        globalskill.addEventListener('click', function(){
-            console.log(this.querySelector("div"))
-
-            for (let skill of globalskills)
-            {
-                if (skill != globalskill)
-                {
-                    skill.querySelector("div").classList.add("skillHide")
-                }
-            }
-
-            this.querySelector("div").classList.toggle("skillHide")
-        })
-    }
-
-    skilllanguages.querySelector("div").classList.remove('skillHide')
-    */
-
-    //Carousel
-
+    //Carousel of projects
     let Carousel = document.getElementById('projectcarousel')
     Carousel.classList.add('hideCarousel')
 
@@ -354,6 +300,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let infoimgs = document.getElementsByClassName('infoimg')
     let timeinterval = 6000
 
+    //Projects images display
     for(let infoimg of infoimgs) {
 
         let randomimgs = infoimg.getElementsByClassName('randimage')
@@ -378,6 +325,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     }
 
+    //Activate the next image from the projects images
     function nextimg(randomimgs)
     {
         let current = null
@@ -406,6 +354,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
+    //Show the project page with the id in argument and hide the others
     function carousel(id = 0) {
         let infosprojects = document.getElementsByClassName('projectinfo')
 
