@@ -232,6 +232,17 @@ document.addEventListener("DOMContentLoaded", function(){
         consoleline.classList.add("unwrited")
     }
 
+    for (let i in consolelines)
+    {
+        if (i <= 4)
+        {
+            setTimeout(function(){
+                consolelines[i].classList.toggle("unwrited")
+                consolelines[i].classList.toggle("writed")
+            },i * 1500)
+        }
+    }
+
     setInterval(function(){
 
         for (let i in consolelines)
@@ -245,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         }
 
-    },9000)
+    },8500)
 
     //Carousel of projects
     let Carousel = document.getElementById('projectcarousel')
