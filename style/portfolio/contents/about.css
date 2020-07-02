@@ -1,11 +1,11 @@
 #div-about {
-	background-color: #F4F0EB;
+	background-color: var(--c-white);
 }
 
 #div-about h1 {
 	font-family: RobotoMedium;
 	font-size: 3em;
-	border-bottom: 2px solid #FFB528;
+	border-bottom: 2px solid var(--c-orange);
 	width: 90%;
 	margin-bottom: 10px;
 }
@@ -24,12 +24,12 @@
 #about-image {
 
 	width: 40%;
-	background-color: #FFB528;
+	background-color: var(--c-orange);
 	padding: 20px;
 
 
 	border-radius: 25px 0px 25px 0px;
-	border-right: 20px solid #1F272D;
+	border-right: 20px solid var(--c-black);
 }
 
 #image-div {
@@ -55,7 +55,7 @@
 	font-family: RobotoMedium; 
 	font-size: 2em;
 
-	border-bottom: 2px solid #1F272D;
+	border-bottom: 2px solid var(--c-black);
 }
 
 #about-image p {
@@ -101,7 +101,7 @@
 
 #about-content ul li i {
 	font-size: 1.6em;
-	color: #FFB528;
+	color: var(--c-orange);
 }
 /*--------------------------------------------------------------------*/
 /*                       All : width < 1050px                         */

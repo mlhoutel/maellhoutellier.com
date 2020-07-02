@@ -1,5 +1,5 @@
 #div-contact {
-	background-color: #F4F0EB;
+	background-color: var(--c-white);
 	padding: 20px 60px 20px;
 	margin-bottom: 200px;
 }
@@ -7,7 +7,7 @@
 #div-contact h1 {
 	font-family: RobotoMedium;
 	font-size: 3em;
-	border-bottom: 2px solid #FFB528;
+	border-bottom: 2px solid var(--c-orange);
 	margin-bottom: 10px;
 }
 
@@ -26,14 +26,14 @@
 	background-color: red;
 	padding: 0px 0px 20px 20px;
 	border-radius: 20px;
-	background-color: #24313A;
+	background-color: var(--c-grey);
 
     padding-left: 10px;
     padding-right: 10px;
 }
 
 #contact-table h2 {
-	color: #FFB528;
+	color: var(--c-orange);
 	padding: 5px;
 	margin-top: 20px;
 	font-family: RobotoRegularItalic;
@@ -49,9 +49,9 @@
     white-space: nowrap;
     margin-right: 10px;
     margin-top: 3px;
-	border: 3px solid #FFB528;
+	border: 3px solid var(--c-orange);
 	border-radius: 10px;
-	background-color: #F4F0EB;
+	background-color: var(--c-white);
 }
 
 .contact:hover i{
@@ -73,12 +73,12 @@
 	text-align: center;
 	width: 30px;
 	font-size: 1.6em;
-	color: #24313A;
+	color: var(--c-grey);
 	padding: 15px;
-	background-color: #FFB528;
+	background-color: var(--c-orange);
 	padding-right: 80%;
 
-	text-shadow: #F4F0EB 2px 2px; 
+	text-shadow: var(--c-white) 2px 2px; 
 	transition: padding 0.5s ease;
 	border-radius: 10px;
 }
@@ -92,7 +92,7 @@
 	margin-top: 10px;
 	font-family: RobotoMedium;
 	font-size: 1.8em;
-	text-shadow: 12px -12px #C6AC8F;
+	text-shadow: 12px -12px var(--c-brown);
 }
 
 #references ul {
@@ -102,7 +102,7 @@
 #references li {
 	margin: 3px;
 	padding: 10px;
-	background-color: #E2D0BE;
+	background-color: var(--c-beige);
 	border-radius: 20px;
 }
 
@@ -114,9 +114,9 @@
 #references li a {
 	margin: 3px;
 	display: inline-block;
-	color: #F4F0EB;
+	color: var(--c-white);
 	padding: 10px;
-	background-color: #1F272D;
+	background-color: var(--c-black);
 	border-radius: 20px;
 	text-decoration:none;
 

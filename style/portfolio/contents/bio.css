@@ -1,5 +1,5 @@
 #div-bio {
-	background-color: #E2D0BE;
+	background-color: var(--c-beige);
 	padding-top: 20px;
 	padding-bottom: 40px;
 	padding-left: 40px;
@@ -8,7 +8,7 @@
 #div-bio h1 {
 	font-family: RobotoMedium;
 	font-size: 3em;
-	border-bottom: 2px solid #FFB528;
+	border-bottom: 2px solid var(--c-orange);
 	width: 90%;
 	margin: 30px;
 }
@@ -29,7 +29,7 @@
 	padding-bottom: 20px;
 
 	font-size: 2em;
-	text-shadow: 5px 5px #F4F0EB;
+	text-shadow: 5px 5px var(--c-white);
 }
 
 #bio-studies {
@@ -53,14 +53,14 @@
 	padding-bottom: 10px;
 	margin-top: 10px;
 
-	border-left: 6px solid #1F272D;
+	border-left: 6px solid var(--c-black);
 	margin-left: -18px;
 }
 
 #bio-studies ul li p{
 	margin-left: -18px;
 	padding-left: 30px;
-	border-left: 6px solid #1F272D;
+	border-left: 6px solid var(--c-black);
 }
 
 #bio-jobs {
@@ -85,14 +85,14 @@
 	padding-bottom: 10px;
 	margin-top: 10px;
 
-	border-left: 6px solid #1F272D;
+	border-left: 6px solid var(--c-black);
 	margin-left: -18px;
 }
 
 #bio-jobs ul li p{
 	margin-left: -18px;
 	padding-left: 30px;
-	border-left: 6px solid #1F272D;
+	border-left: 6px solid var(--c-black);
 }
 
 /*--------------------------------------------------------------------*/

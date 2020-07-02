@@ -248,7 +248,7 @@
 }
 
 #menu-background {
-	background-color:#598392;
+	background-color:var(--c-charon);
 	cursor: pointer;
 
 	width: 50vh;
@@ -264,7 +264,7 @@
 }
 
 #menu-grip div {
-	background-color:#598392;
+	background-color:var(--c-charon);
 	cursor: pointer;
 
 	position: absolute;
@@ -315,7 +315,7 @@
 }
 
 #div-home-background div {
-	background-color: #F4F0EB;
+	background-color: var(--c-white);
 
 	position: absolute;
 	width: 100vw;
@@ -337,7 +337,7 @@
 	margin-top: 10px;
 	font-family: RobotoMedium;
 	font-size: 1.8em;
-	text-shadow: 60px -12px #C6AC8F;
+	text-shadow: 60px -12px var(--c-brown);
 }
 
 #presentation1, #presentation2 {
@@ -401,9 +401,9 @@
 }
 
 #cvlink {
-	color: #F4F0EB;
+	color: var(--c-white);
 	padding: 10px;
-	background-color: #1F272D;
+	background-color: var(--c-black);
 	border-radius: 20px;
 	text-decoration:none;
 }
@@ -411,7 +411,7 @@
 /*-------------- Home page switch : Next --------------*/
 
 #home-next {
-	background-color: #FFB528;
+	background-color: var(--c-orange);
 	cursor: pointer;
 	transition: background-color 0.5s ease;
 
@@ -441,7 +441,7 @@
 }
 
 #home-next:hover {
-	background-color: #C6AC8F;
+	background-color: var(--c-brown);
 	transition: background-color 0.5s ease;
 }
 
@@ -450,7 +450,7 @@
 	font-size: 2.4em;
 
 	transition: background-color 0.5s ease, font-size 0.5s ease, text-shadow 0.5s ease;
-	text-shadow: 50px 0px #F4F0EB, -50px 0px #F4F0EB;
+	text-shadow: 50px 0px var(--c-white), -50px 0px var(--c-white);
 }
 
 /*--------------------------------------------------------------------*/

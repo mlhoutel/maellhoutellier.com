@@ -1,5 +1,5 @@
 #div-skills {
-	background-color: #F4F0EB;
+	background-color: var(--c-white);
 	padding-top: 20px;
 	padding-bottom: 40px;
 	padding-left: 40px;
@@ -8,7 +8,7 @@
 #div-skills h1 {
 	font-family: RobotoMedium;
 	font-size: 3em;
-	border-bottom: 2px solid #FFB528;
+	border-bottom: 2px solid var(--c-orange);
 	width: 90%;
 	margin: 30px;
 }
@@ -45,7 +45,7 @@
 #skills-select {
 
 	border-radius: 20px 20px 0 0;
-	background-color: #FFB528;
+	background-color: var(--c-orange);
 }
 
 #skills-select h3 {
@@ -64,7 +64,7 @@
 	height: 800px;
 	width: auto;
 	overflow: hidden;
-	background: url("../../../ressources/images/Code.png");
+	background: var(--i-code);
 	background-size: cover;
 	background-position: center;
 }
@@ -74,9 +74,9 @@
 	right: 0px;
 	left: 0px;
 
-	background-color: #24313A;
+	background-color: var(--c-grey);
 	padding: 20px;
-	color: #F4F0EB;
+	color: var(--c-white);
 }
 
 .skillwrapper {	
@@ -120,8 +120,8 @@
 }
 
 .selectskill {
-	background-color: #24313A;
-	color: #F4F0EB;
+	background-color: var(--c-grey);
+	color: var(--c-white);
 	border-radius: 20px 20px 0 0;
 }
 .hideskill {
@@ -194,7 +194,7 @@
 
 #skills-languages {
 	margin-top: 20px;
-	background-color: #24313A;
+	background-color: var(--c-grey);
 	border-radius: 20px 20px 0 0;
 	padding-bottom: 20px;
 }
@@ -207,7 +207,7 @@
 	font-family: RobotoLight;
 
 	border-radius: 20px 20px 0 0;
-	background-color: #FFB528;;
+	background-color: var(--c-orange);;
 }
 
 .languages-listskill {

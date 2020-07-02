@@ -17,7 +17,7 @@
 }
 
 #navbar ul {
-	background-color: #1F272D;
+	background-color: var(--c-black);
 
 	list-style-type: none;
 	overflow: hidden;
@@ -31,7 +31,7 @@
 }
 
 #navbar ul li a {
-	color: #F4F0EB;
+	color: var(--c-white);
 	font-family: RobotoMedium;
 	transition: 0.1s ease;
 
@@ -43,8 +43,8 @@
 }
 
 #navbar ul li a:hover {
-	background-color: #24313A;
-	color: #C6AC8F;
+	background-color: var(--c-grey);
+	color: var(--c-brown);
 	font-size: 1.4em;
 	transition: 0.1s ease;
 
@@ -52,18 +52,18 @@
 }
 
 .navbar-responsive:hover{
-	border-top: 3px solid #FFB528;
+	border-top: 3px solid var(--c-orange);
 }
 
 #navbar .navbar-icon {
-	background-color: #FFB528;
+	background-color: var(--c-orange);
 	height: 100%;
 	padding: 0px;
 	transition: 0.5s ease;
 }
 
 #navbar .navbar-icon:hover {
-	border-left: 40px solid #FFB528;
+	border-left: 40px solid var(--c-orange);
 	transition: 0.5s ease;
 }
 
@@ -73,7 +73,7 @@
 
 	position: absolute;
 	right: 0px;
-	background-color: #124559;
+	background-color: var(--c-blue);
 	width: 80px;
 }
 
@@ -239,7 +239,7 @@ span + span {
 }
 
 #scroller div:hover {
-	fill: #FFB528;
+	fill: var(--c-orange);
 }
 
 #scroll-top {
@@ -265,14 +265,14 @@ span + span {
 	-ms-transform: rotate(90deg);
 	transform: rotate(90deg);
 
-	color: #F4F0EB;
-	background-color: #FFB528;;
+	color: var(--c-white);
+	background-color: var(--c-orange);;
 	border: none;
 }
 
 #scroll-top-button:hover {
-	color: #24313A;
-	background-color: #F4F0EB;
+	color: var(--c-grey);
+	background-color: var(--c-white);
 }
 
 /*--------------------------------------------------------------------*/
@@ -304,7 +304,7 @@ span + span {
 
 	.navbar-active ul li {
 		width: 100vw;
-		background-color: #1F272D;
+		background-color: var(--c-black);
 	}
 
 	.navbar-unactive ul li {

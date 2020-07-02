@@ -1,7 +1,7 @@
 footer {
 	height: 200px;
 	width: 100vw;
-	background-color: #1F272D;
+	background-color: var(--c-black);
 	position: fixed;
 	bottom: 0px;
 	z-index: -10;
@@ -16,7 +16,7 @@ footer p {
 	top: 50%;
 	left: 50%;  
 	transform: translate(-50%, -50%);
-	color: #F4F0EB;
+	color: var(--c-white);
 }
 
 /*--------------------------------------------------------------------*/
