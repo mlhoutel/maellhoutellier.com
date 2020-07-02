@@ -65,37 +65,37 @@
 }
 
 #project1 {
-	background: url("../../images/DashRaider4.png");
+	background: url("../../../ressources/images//DashRaider4.png");
 	background-size: cover;
 	background-position: center;
 }
 
 #project2 {
-	background: url("../../images/ChromaBlast4.png");
+	background: url("../../../ressources/images//ChromaBlast4.png");
 	background-size: cover;
 	background-position: center;
 }
 
 #project3 {
-	background: url("../../images/Brochure1.png");
+	background: url("../../../ressources/images/Brochure1.png");
 	background-size: cover;
 	background-position: center;
 }
 
 #project4 {
-	background: url("../../images/Genetic2.png");
+	background: url("../../../ressources/images/Genetic2.png");
 	background-size: cover;
 	background-position: center;
 }
 
 #project5 {
-	background: url("../../images/FractaleJulia.png");
+	background: url("../../../ressources/images/FractaleJulia.png");
 	background-size: cover;
 	background-position: center;
 }
 
 #project6 {
-	background: url("../../images/Conways1.png");
+	background: url("../../../ressources/images/Conways1.png");
 	background-size: cover;
 	background-position: center;
 }

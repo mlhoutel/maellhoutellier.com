@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------*/
-/*                             GLOBAL                                 */
+/*          Global: All Styles, Colors Palette and Fonts              */
 /*--------------------------------------------------------------------*/
 
 * {
@@ -14,82 +14,140 @@ html {
 }
 
 body {
-    cursor: url("https://img.icons8.com/ios-glyphs/30/000000/cursor.png"), auto;
+    cursor: url("../ressources/cursors/cursor.png"), auto;
 }
 
 /*
 html::-webkit-scrollbar { width: 0 !important }
 html { overflow: -moz-scrollbars-none; }
 html { -ms-overflow-style: none; }
-
-*/
-/*--------------------------------------------------------------------*/
-/*                           COLOR PALETTE                            */
-/*--------------------------------------------------------------------*/
-/*
-	BLACK : #1F272D 
-    LIGHT BLACK: #24313A;
-	BLUE : #124559 
-	LIGHT BLUE : #598392
-	WHITE : #F4F0EB 
-	BROWN : #C6AC8F;
-    LIGHT BROWN : #E2D0BE;
-    ORANGE : #FFB528;
 */
 
 /*--------------------------------------------------------------------*/
-/*                                 FONTS                              */
+/*                           Color Palette                            */
+/*--------------------------------------------------------------------*/
+
+:root {
+    --c-black: #1F272D;     /* Black    [31;  39;  45]  */
+    --c-grey: #24313A;      /* Grey     [36;  49;  58]  */
+    --c-white: #F4F0EB;     /* White    [244; 240; 235] */
+
+    --c-orange: #FFB528;    /* Orange   [255; 181; 40]  */
+
+    --c-brown: #C6AC8F;     /* Brown    [198; 172; 143] */
+    --c-beige: #E2D0BE;     /* Beige    [226; 208; 190] */
+
+    --c-blue: #124559;      /* Blue     [18;  69;  89]  */
+    --c-charon: #598392;    /* Charon   [89; 131; 146]  */
+}
+
+/*--------------------------------------------------------------------*/
+/*                        Images References                           */
+/*--------------------------------------------------------------------*/
+
+:root {
+    --i-switchbk: url("../../ressources/images/Switchbackground.png"); /* From home.css */
+}
+/*--------------------------------------------------------------------*/
+/*                            Roboto Font                             */
 /*--------------------------------------------------------------------*/
 
 @font-face {
     font-family: 'RobotoLight';
-    src: url('fonts/Roboto/roboto-light-webfont.woff2') format('woff2'),
-         url('fonts/Roboto/roboto-light-webfont.woff') format('woff');
+    src: url('../ressources/fonts/Roboto/roboto-light-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/Roboto/roboto-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'RobotoRegular';
-    src: url('fonts/Roboto/roboto-regular-webfont.woff2') format('woff2'),
-         url('fonts/Roboto/roboto-regular-webfont.woff') format('woff');
+    src: url('../ressources/fonts/Roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/Roboto/roboto-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'RobotoRegularItalic';
-    src: url('fonts/Roboto/roboto-italic-webfont.woff2') format('woff2'),
-         url('fonts/Roboto/roboto-italic-webfont.woff') format('woff');
+    src: url('../ressources/fonts/Roboto/roboto-italic-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/Roboto/roboto-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'RobotoMedium';
-    src: url('fonts/Roboto/roboto-medium-webfont.woff2') format('woff2'),
-         url('fonts/Roboto/roboto-medium-webfont.woff') format('woff');
+    src: url('../ressources/fonts/Roboto/roboto-medium-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/Roboto/roboto-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'RobotoMediumItalic';
-    src: url('fonts/Roboto/roboto-mediumitalic-webfont.woff2') format('woff2'),
-         url('fonts/Roboto/roboto-mediumitalic-webfont.woff') format('woff');
+    src: url('../ressources/fonts/Roboto/roboto-mediumitalic-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/Roboto/roboto-mediumitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'RobotoBold';
-    src: url('fonts/Roboto/roboto-bold-webfont.woff2') format('woff2'),
-         url('fonts/Roboto/roboto-bold-webfont.woff') format('woff');
+    src: url('../ressources/fonts/Roboto/roboto-bold-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/Roboto/roboto-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
+/*--------------------------------------------------------------------*/
+/*                          Config Condensed Font                     */
+/*--------------------------------------------------------------------*/
 
+@font-face {
+    font-family: 'ConfigBold';
+    src: url('../ressources/fonts/ConfigCondensed/configcondensed-bold-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/ConfigCondensed/configcondensed-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ConfigBoldItalic';
+    src: url('../ressources/fonts/ConfigCondensed/configcondensed-bolditalic-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/ConfigCondensed/configcondensed-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ConfigExtraBold';
+    src: url('../ressources/fonts/ConfigCondensed/configcondensed-extrabold-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/ConfigCondensed/configcondensed-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ConfigLight';
+    src: url('../ressources/fonts/ConfigCondensed/configcondensed-light-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/ConfigCondensed/configcondensed-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ConfigRegular';
+    src: url('../ressources/fonts/ConfigCondensed/configcondensed-regular-webfont.woff2') format('woff2'),
+         url('../ressources/fonts/ConfigCondensed/configcondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 

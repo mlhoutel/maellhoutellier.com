@@ -2,21 +2,21 @@
 <html>
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>Portfolio</title>
-	<link rel="icon" href="images/Favicon.ico" />
+	<title>Maël Lhoutellier</title>
+
+	<link rel="icon" href="ressources/favicons/sumgrad.ico" />
+	<link rel="stylesheet" href="ressources/fonts/Icons/css/all.min.css">
 
 	<link rel="stylesheet" href="style/style.css">
-	<link rel="stylesheet" href="style/home.css">
-	<link rel="stylesheet" href="style/content.css">
+	<link rel="stylesheet" href="style/portfolio/home.css">
+	<link rel="stylesheet" href="style/portfolio/content.css">
 
-	<link rel="stylesheet" href="style/contents/about.css">
-	<link rel="stylesheet" href="style/contents/bio.css">
-	<link rel="stylesheet" href="style/contents/skills.css">
-	<link rel="stylesheet" href="style/contents/projects.css">
-	<link rel="stylesheet" href="style/contents/contact.css">
-	<link rel="stylesheet" href="style/contents/footer.css">
-
-	<link rel="stylesheet" href="style/fonts/Icons/css/all.min.css">
+	<link rel="stylesheet" href="style/portfolio/contents/about.css">
+	<link rel="stylesheet" href="style/portfolio/contents/bio.css">
+	<link rel="stylesheet" href="style/portfolio/contents/skills.css">
+	<link rel="stylesheet" href="style/portfolio/contents/projects.css">
+	<link rel="stylesheet" href="style/portfolio/contents/contact.css">
+	<link rel="stylesheet" href="style/portfolio/contents/footer.css">
 
   	<script src="script/main.js"></script>
 </head>
@@ -26,19 +26,31 @@
 		<div id="home-bar">
 			<div id="home-content">
 				<div id="home-content-background"></div>
-				<h1 id="home-content-name">LHOUTELLIER Maël</h1>
-				<h1 id="home-content-title">MY PORTFOLIO</h1>
-				<div id="rect-bar"></div>
+				<h1 id="home-content-logo">
+					<img src="ressources\logos\SVG\sigmblack.svg">
+				</h1>
+				<h1 id="home-content-title">
+					<img src="ressources\logos\SVG\hexcolor.svg">
+					<div>
+						<p id="home-content-title-L">LHOUTELLIER</p>
+						<p id="home-content-title-M">Maël</p>
+					</div>
+				</h1>
+				<div id="rect-barA" class="rect-bar"></div>
+				<div id="rect-barB" class="rect-bar"></div>
 			</div>
 
 			<nav id="home-navbar">
 				<ul>
-					<li><a class='scroll-top-button'>HOME</a></li>
-					<li><a href="#div-about">ABOUT</a></li>
-					<li><a href="#div-bio">RESUME</a></li>
-					<li><a href="#div-skills">SKILLS</a></li>
-					<li><a href="#div-projects">PROJECTS</a></li>
-					<li><a href="#div-contact">CONTACT</a></li>
+					<li class="home-navbar-button"><a href="">PORTFOLIO</a></li>
+					<li class="home-navbar-button"><a href="">PROJECTS</a></li>
+					<li class="home-navbar-button"><a href="">ARTICLES</a></li>
+					<li class="home-navbar-button"><a href="">ABOUT</a></li>
+					<li class="home-navbar-flags">
+						<div id="flag-fr"><img src="ressources\flags\fr.svg"></div>
+						<div id="flag-en"><img src="ressources\flags\sh.svg"></div>
+						<div id="flag-it"><img src="ressources\flags\it.svg"></div>
+					</li>
 				</ul>
 			</nav>
 			<div id="home-navbar-background"></div>
@@ -47,24 +59,13 @@
 		<div id="switch">
 			<div id="switch-menu" class="switch-menu-close">
 				
-				<div id="menu-grip" class="">
+				<div id="menu-grip">
 					<div id="grip"></div>
 				</div>				
 				<div id="menu-background">
 					<div id="menu-content">
 						<h2>SWITCH MENU </h2>
 						<h2>(Currently in Dev)</h2>
-						<div id="flags">
-							<div class="flag">
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png">
-							</div>
-							<div class="flag">
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png">
-							</div>
-							<div class="flag">
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/800px-Flag_of_Italy.svg.png">
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -106,7 +107,7 @@
 		<nav id="navbar" class="navbar-unactive">
 			<ul>
 				<li><a href="" class="navbar-icon"></a></li>
-				<li><a class='scroll-top-button' class="navbar-responsive">HOME</a></li>
+				<li><a href="" class="scroll-top-button navbar-responsive">HOME</a></li>
 				<li><a href="#div-about" class="navbar-responsive">ABOUT</a></li>
 				<li><a href="#div-bio" class="navbar-responsive">RESUME</a></li>
 				<li><a href="#div-skills" class="navbar-responsive">SKILLS</a></li>
@@ -127,7 +128,7 @@
 			<div id="about-table">
 				<div id="about-image">
 					<div id="image-div">
-						<img src="images/Profil.png">
+						<img src="ressources/images/Profil.png">
 						<legend></legend>
 					</div>
 					<h2>Who am I</h2>
@@ -186,6 +187,15 @@
 				<div id="bio-jobs">
 					<h2><i class="far fa-building"></i> Jobs</h2>
 					<ul>
+						<li>
+							<svg width="100" height="100">
+								<rect width="30" height="40" fill="#E2D0BE"></rect>
+								<circle cx="15" cy="15" r="12" fill="#FFB528"></circle>
+							</svg>
+							<h3><i class="fas fa-keyboard"></i> 2020: CEA Research Center - Internship (3 months)</h3>
+							<p>\ Analysis, compilation and development of Prismatic, an atomic simulation software for scanning transmission electron microscopy (STEM).</p>
+							<p>CEA (LEMMA Department), Grenoble, France </p>
+						</li>
 						<li>
 							<svg width="100" height="100">
 								<rect width="30" height="40" fill="#E2D0BE"></rect>
@@ -499,23 +509,23 @@
 						<h2>Dash Raider</h2>
 						<div class="infoimg">
 							<div class="randimage">
-								<img src="images/DashRaider5.png">
+								<img src="ressources/images/DashRaider5.png">
 								<p>Dash Raider Menu screen</p>
 							</div>
 							<div class="randimage">
-								<img src="images/DashRaider1.png">
+								<img src="ressources/images/DashRaider1.png">
 								<p>Some screenshots from the game</p>
 							</div>
 							<div class="randimage">
-								<img src="images/DashRaider2.png">
+								<img src="ressources/images/DashRaider2.png">
 								<p>Some screenshots from the game</p>
 							</div>
 							<div class="randimage">
-								<img src="images/DashRaider3.png">
+								<img src="ressources/images/DashRaider3.png">
 								<p>Some screenshots from the game</p>
 							</div>
 							<div class="randimage">
-								<img src="images/DashRaider4.png">
+								<img src="ressources/images/DashRaider4.png">
 								<p>Some screenshots from the game</p>
 							</div>
 						</div>
@@ -547,19 +557,19 @@
 						<h2>Chroma Blast</h2>
 						<div class="infoimg">
 							<div class="randimage">
-								<img src="images/ChromaBlast1.png">
+								<img src="ressources/images/ChromaBlast1.png">
 								<p>Chroma Blast menu screen</p>
 							</div>
 							<div class="randimage">
-								<img src="images/ChromaBlast2.png">
+								<img src="ressources/images/ChromaBlast2.png">
 								<p>Chroma Blast game rules</p>
 							</div>
 							<div class="randimage">
-								<img src="images/ChromaBlast3.png">
+								<img src="ressources/images/ChromaBlast3.png">
 								<p>Some screenshots from the game</p>
 							</div>
 							<div class="randimage">
-								<img src="images/ChromaBlast4.png">
+								<img src="ressources/images/ChromaBlast4.png">
 								<p>Some screenshots from the game</p>
 							</div>
 						</div>
@@ -592,19 +602,19 @@
 
 						<div class="infoimg">
 							<div class="randimage">
-								<img src="images/Brochure1.png">
+								<img src="ressources/images/Brochure1.png">
 								<p>View of the flyer opened (external)</p>
 							</div>
 							<div class="randimage">
-								<img src="images/Brochure2.png">
+								<img src="ressources/images/Brochure2.png">
 								<p>View of the flyer opened (internal)</p>
 							</div>
 							<div class="randimage">
-								<img src="images/Brochure3.png">
+								<img src="ressources/images/Brochure3.png">
 								<p>Details of the brochure</p>
 							</div>
 							<div class="randimage">
-								<img src="images/Brochure4.png">
+								<img src="ressources/images/Brochure4.png">
 								<p>Details of the brochure</p>
 							</div>
 						</div>
@@ -632,15 +642,15 @@
 						<h2>Simulations</h2>
 						<div class="infoimg">
 							<div class="randimage">
-								<img src="images/Tri2.gif">
+								<img src="ressources/images/Tri2.gif">
 								<p>Short animations of the sorting concept</p>
 							</div>
 							<div class="randimage">
-								<img src="images/Billard.gif">
+								<img src="ressources/images/Billard.gif">
 								<p>Short animations of the collision concept</p>
 							</div>
 							<div class="randimage">
-								<img src="images/Rocket.gif">
+								<img src="ressources/images/Rocket.gif">
 								<p>Short animations of the genetic concept</p>
 							</div>
 						</div>
@@ -674,19 +684,19 @@
 						<h2>Fractals</h2>
 						<div class="infoimg">
 							<div class="randimage">
-								<img src="images/FractaleDragon.png">
+								<img src="ressources/images/FractaleDragon.png">
 								<p>Example of recursive fractal</p>
 							</div>
 							<div class="randimage">
-								<img src="images/FractaleDragon2.png">
+								<img src="ressources/images/FractaleDragon2.png">
 								<p>Example of recursive fractal</p>
 							</div>
 							<div class="randimage">
-								<img src="images/FractaleMandelbro.png">
+								<img src="ressources/images/FractaleMandelbro.png">
 								<p>Example of Mandelbro fractal</p>
 							</div>
 							<div class="randimage">
-								<img src="images/FractaleJulia.png">
+								<img src="ressources/images/FractaleJulia.png">
 								<p>Example of Julia fractal</p>
 							</div>
 						</div>
@@ -721,11 +731,11 @@
 						<h2>Conways Game</h2>
 						<div class="infoimg">
 							<div class="randimage">
-								<img src="images/Conways1.gif">
+								<img src="ressources/images/Conways1.gif">
 								<p>Short animations of the Conways game</p>
 							</div>
 							<div class="randimage">
-								<img src="images/Conways2.gif">
+								<img src="ressources/images/Conways2.gif">
 								<p>Short animations of the Conways game</p>
 							</div>
 						</div>

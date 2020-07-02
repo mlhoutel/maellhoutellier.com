@@ -5,8 +5,10 @@
 /*----------------------- Home page bar Global -----------------------*/
 
 #home {
+	background-color: var(--c-charon);
+
+	background-image: var(--i-switchbk);
 	height: 100vh;
-	background-image: url("../images/Switchbackground.png");
 	background-size: cover;
 }
 
@@ -30,78 +32,123 @@
 }
 
 #home-content-background {
-	background-color: #FFB528;
+	background-color: var(--c-orange);
 
 	width: 300px;
 	height: 300px;
 	transform: rotate(-15deg)translateX(2%)translateY(-15%);
 }
 
-#home-content-title , #rect-bar {
+#home-content-title {
 	display: inline-block;
 	position: absolute;
 	top: 50%;
-	-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
+	-ms-transform: translateY(-45%);
+		transform: translateY(-45%);
 }
 
-#home-content-title {
-	color: #1F272D ;
-	font-family: RobotoBold;
-	transition: 0.3s ease;
+#home-content-logo, #home-content-title {
+	color: var(--c-black) ;
 
-	font-size: 1.8em;
+	transition: 0.3s ease;
 	left: 10px;
 }
 
-#home-content-name {
-	color: #1F272D ;
-	font-family: RobotoRegularItalic;
-	transition: 0.3s ease;
+#home-content-title img, #home-content-title div {
+	display: inline-block;
+}
 
-	position: absolute;
+#home-content-logo img {
+	width: 70px;
+}
+
+#home-content-title img {
+	width: 55px;
+}
+
+#home-content-title p {
+	padding-left: 5px;
+}
+
+#home-content-title-L {
+	color: transparent;
+	font-family: RobotoMediumItalic;
+	font-size: 1em;
+
+	text-shadow: 0px 5px 0px var(--c-grey);
+}
+
+#home-content-title-M {
+	color: transparent;
+	font-family: ConfigLight;
 	font-size: 1.6em;
 
+	letter-spacing: 5px;
+	text-shadow: 20px -5px 0px var(--c-white);
+
+	-moz-transform: skew(15deg, 0deg);
+	-webkit-transform: skew(15deg, 0deg);
+	-o-transform: skew(15deg, 0deg);
+	-ms-transform: skew(15deg, 0deg);
+	transform: skew(15deg, 0deg);	
+}
+
+#home-content-logo {
+	font-family: RobotoRegularItalic;
+	position: absolute;
+	font-size: 1.6em;
 	top: -100px;
-	left: 10px;
-
+	left: 100px;
 	z-index: 100;
-
 }
 
 #home-content:hover #home-content-background{
-	background-color: #C6AC8F;
+	background-color: var(--c-brown);
 	transition: 0.4s ease;
 }
 
 #home-content:hover #home-content-title{
-	font-size:1.9em;
-	color: #F4F0EB;
+	color: var(--c-white);
 	transition: 0.4s ease;
-
-	top: 100px;
-	left: 5px;
+	top: 140px;
 }
 
-#home-content:hover #home-content-name{
+#home-content:hover #home-content-logo{
 	top: 50%;
-	-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
+	-ms-transform: translateY(-45%);
+		transform: translateY(-45%);
 	transition: 0.5s ease;
 }
 
-#rect-bar {
-	background-color: #F4F0EB;
+.rect-bar {
+	background-color: var( --c-black);
+	display: inline-block;
+	position: absolute;
+	top: 30%;
+	
+	-moz-transform: skew(15deg, 0deg);
+	-webkit-transform: skew(15deg, 0deg);
+	-o-transform: skew(15deg, 0deg);
+	-ms-transform: skew(15deg, 0deg);
+	transform: skew(15deg, 0deg);	
+}
 
+#rect-barA {
+	left: 258px;
+	height: 45px;
+	width: 10px;
+}
+
+#rect-barB {
 	left: 248px;
 	height: 45px;
-	width: 4px;
+	width: 5px;
 }
 
 /*--------------- Home page bar Second part : NavBar ----------------*/
 
 #home-navbar-background {
-	background-color: #124559;
+	background-color: var(--c-blue);
 
 	position: absolute;
 	width: 100%;
@@ -114,7 +161,7 @@
 }
 
 #home-navbar ul {
-	background-color: #1F272D;
+	background-color: var(--c-black);
 
 	list-style-type: none;
 	overflow: hidden;
@@ -131,33 +178,48 @@
 	transform: skew(15deg, 0deg);
 }
 
-#home-navbar ul li {
+.home-navbar-button {
 	float: left;
-	width:calc(16.67vw - 60px);
+	width: calc(16.67vw - 60px);
 }
 
-#home-navbar ul li a {
-	color: #F4F0EB;
-	font-family: RobotoRegularItalic;
-	transition: 0.1s ease;
+.home-navbar-button a {
+	color: transparent;
+	font-family: RobotoBold;
+	font-size: 1.2em;
 
+	text-shadow: 0px 0px 0px var(--c-white),
+				0px 0px 0px var(--c-black);
+
+	padding: 10px 12px;
+	transition: 0.5s ease;
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	padding: 14px 16px;
-	
+
 }
 
-#home-navbar ul li a:hover{
+.home-navbar-button a:hover{
+	color: transparent;
+	font-size: 1.3em;
 
-	background-color: #24313A;
-	color: #C6AC8F;
-	font-size: 1.4em;
+	text-shadow: -4px -4px 0px var(--c-white),
+				0px 0px 0px var(--c-black);
+
 	transition: 0.1s ease;
-
-	padding: 8px 12px;
+	background-color: var(--c-grey);
 }
 
+.home-navbar-flags {
+	background-color: var(--c-black);
+	float: left;
+	width: 250px;
+}
+
+.home-navbar-flags div {
+	display: inline-block;
+	width: 80px;
+}
 
 /*--------------------------------------------------------------------*/
 /*             Home page switch : SwitchMenu and HomeDiv              */
@@ -226,23 +288,6 @@
 
 .switch-menu-close {
 	left:-40vh;
-}
-
-#flags {
-	display: table;
-}
-
-.flag {
-	display: table-row;
-	width: 90px;
-	height: 90px;
-	padding: 10px;
-}
-
-.flag img{
-
-	width: 100%;
-	height: 100%;
 }
 
 /*-------------- Home page switch Second part : HomeDiv --------------*/
@@ -363,13 +408,6 @@
 	text-decoration:none;
 }
 
-#div-home p {
-	
-}
-
-
-
-
 /*-------------- Home page switch : Next --------------*/
 
 #home-next {
@@ -387,7 +425,8 @@
 }
 
 #home-next-button {
-	font-size: 1.4em;
+	font-family: RobotoMedium;
+	font-size: 2em;
 	transition: background-color 0.5s ease, font-size 0.5s ease, text-shadow 0.5s ease;
 
 	z-index: 42;
@@ -407,8 +446,8 @@
 }
 
 #home-next:hover #home-next-button{
-	font-family: RobotoMedium;
-	font-size: 2em;
+	
+	font-size: 2.4em;
 
 	transition: background-color 0.5s ease, font-size 0.5s ease, text-shadow 0.5s ease;
 	text-shadow: 50px 0px #F4F0EB, -50px 0px #F4F0EB;
@@ -417,11 +456,16 @@
 /*--------------------------------------------------------------------*/
 /*                       All : width < 1050px                         */
 /*--------------------------------------------------------------------*/
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1250px) {
+
+	#home-navbar ul {
+		width: 250px;
+	}
 
 	#home-navbar ul li a {
 		display: none;
 	}
+
 
 	#switch-menu {
 		display: none;

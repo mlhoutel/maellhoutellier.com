@@ -1,19 +1,56 @@
-//Wait the page load
-document.addEventListener("DOMContentLoaded", function(){
 
-    //Switch Menu Vars
-    let statusSwitch = false
-    let switchMenu = document.getElementById("switch-menu")
-    let switchContent = document.getElementById("switch-content")
 
-    let menuGrip = document.getElementById("menu-grip")
-    let grip = document.getElementById("grip")
-    let menuBackground = document.getElementById("menu-background")
+// Wait for the document to be fully loaded before calling the functions
+document.addEventListener('DOMContentLoaded', function() {
 
-    let menuArray = [grip,menuBackground]
-    let content = document.getElementById("content")
+    // Global Switch Menu Vars
+    var MenuSwitched = false
 
-    //Links Auto scroll
+    // Global Content Vars
+    let content = document.getElementById('content')
+
+    // Initialize the functions for the Switch-menu
+    menuSlider(MenuSwitched)
+
+    // Initialize the functions for the Auto-scroll Links 
+    autoScroll()
+    
+    // Initialize the functions for the Auto-scroll-top Buttons
+    scrollTop()
+    
+    // Initialize the functions for the Next button (unlock the website)
+    unlockNext()
+
+    // Initialize the responsive nav-bar
+    setupNavbar()
+    
+    // Initialize the Skills and the Skill-selector
+    setupSkill()
+
+    // Initialize the Console and the Lines writing
+    setupConsole() 
+
+    setupProjects()
+
+    
+function loadCSS(stylesheetId, stylesheetLink) {
+
+    let head  = document.getElementsByTagName('head')[0];
+    // Check is the stylesheet is not already included
+    if (!document.getElementById(stylesheetId)) {
+
+        let link  = document.createElement('link');
+        link.id   = stylesheetId;
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = stylesheetLink;
+        link.media = 'all';
+        head.appendChild(link);
+    }
+}
+
+function autoScroll() {
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -28,28 +65,29 @@ document.addEventListener("DOMContentLoaded", function(){
 
             window.scrollTo({
                 top: offsetPosition,
-                behavior: "smooth"
+                behavior: 'smooth'
             }); 
         });
     });
-    
-    //SrollTopButton auto Scroll
-    let scrollstop = document.getElementsByClassName("scroll-top-button")
+}
 
-    for (let scrolltop of scrollstop)
-    {
-        scrolltop.addEventListener('click', function (e) {
+function scrollTop() {
+
+    document.querySelectorAll('.scroll-top-button').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
             window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
+                top: 0,
+                behavior: 'smooth',
             });
         });  
-    }
-    
-    //Unlock the website after the Home page
-    document.getElementById("home-next").addEventListener('click', function (e) {
+    });
+}
+
+function unlockNext() {
+
+    document.getElementById('home-next').addEventListener('click', function (e) {
         e.preventDefault();
 
         content.classList.remove('hide')
@@ -57,208 +95,163 @@ document.addEventListener("DOMContentLoaded", function(){
         window.scrollTo({
             top: document.documentElement.clientHeight,
             behavior: 'smooth',
-        })
+        });
     });
+}
 
-    //Menu slider
-    menuArray.forEach( function (elem)
-    {
-        elem.addEventListener('click', function () {
+function menuSlider(Switched) {
 
-            if (statusSwitch == false)
-            {
-                statusSwitch = true;
+    let switchMenu = document.getElementById('switch-menu')
+    let switchContent = document.getElementById('switch-content')
 
+    let menuGrip = document.getElementById('menu-grip')
+    let grip = document.getElementById('grip')
+    let menuBackground = document.getElementById('menu-background')
+
+    let list = [grip, switchMenu].forEach(e => {
+
+        e.addEventListener('click', function () {
+            if (!Switched) {
+                Switched = true;
                 switchMenu.classList.add('animated')
                 switchContent.classList.add('animated')
 
-                setTimeout( function() {
-                    
-                    if (switchMenu.classList.contains('switch-menu-open'))
-                    {
+                setTimeout(function() {
+                    if (switchMenu.classList.contains('switch-menu-open')) {
                         switchMenu.classList.remove('switch-menu-open')
                         switchMenu.classList.add('switch-menu-close')
-
                         switchContent.classList.remove('switch-content-open')
                         switchContent.classList.add('switch-content-close')
-                    }
-                    else
-                    {
+                    } else {
                         switchMenu.classList.remove('switch-menu-close')
                         switchMenu.classList.add('switch-menu-open')
-
                         switchContent.classList.remove('switch-content-close')
                         switchContent.classList.add('switch-content-open')
                     }
-
                 }, 100);
 
-                setTimeout(function() {
-                    statusSwitch = false
-                }, 300);
+                setTimeout(function() { Switched = false }, 500);
             }
-            
-        })
-    })
+        });
+    });
 
     //Add the transition effect only when the Slider open/close
     switchContent.addEventListener('transitionend', function(event) {
         switchMenu.classList.remove('animated')
         switchContent.classList.remove('animated')
-    }, false );
+    }, false);
+}
 
-
+function setupNavbar() {
     //Burger responsive navbar vars
     let burger = document.getElementById('burger')
-    let navbar = document.getElementById("navbar")
+    let navbar = document.getElementById('navbar')
 
     //Activate the responsive navbar
     burger.addEventListener('click', function() {
         burger.classList.toggle('active')
         burger.classList.toggle('not-active')
 
-        navbar.classList.toggle("navbar-active")
-        navbar.classList.toggle("navbar-unactive")
+        navbar.classList.toggle('navbar-active')
+        navbar.classList.toggle('navbar-unactive')
     });
 
     //Activate the navbar elements
-    for(let d of document.getElementsByClassName("navbar-responsive"))
+    for(let d of document.getElementsByClassName('navbar-responsive'))
     {
         d.addEventListener('click',function(){
             burger.classList.remove('active')
             burger.classList.add('not-active')
 
-            navbar.classList.remove("navbar-active")
-            navbar.classList.add("navbar-unactive")
+            navbar.classList.remove('navbar-active')
+            navbar.classList.add('navbar-unactive')
         })
     }
+}
 
-    //Skill tab selector
+function setupSkill() {
+
+    // Skill tab selector
     let skillselects = document.querySelectorAll("#skills-select h3")
     let skillcontents = document.querySelectorAll(".skill-content")
 
-    selectskill(document.getElementById('select-code'))
+    selectSkill(document.getElementById('select-code'))
 
-    //Activate a skill tab
-    for (let skillselect of skillselects)
-    {
-        skillselect.addEventListener("click", function(){
-            selectskill(this)
-        })
+    // Activate a skill tab
+    for (let skillselect of skillselects) {
+        skillselect.addEventListener("click", function() { selectSkill(this) })
+    }
+}
+
+//Select a skillpage from the skill tabs and update skill-rings
+function selectSkill(select) {
+    let content = document.getElementById(select.id.replace('select-','content-'))
+    let skillselects = document.querySelectorAll("#skills-select h3")
+    let skillcontents = document.querySelectorAll(".skill-content")
+
+    for (let skillcontent of skillcontents) { skillcontent.classList.add('hideskill') }
+    for (let skillselect of skillselects) { skillselect.classList.remove('selectskill') }
+
+    content.classList.remove('hideskill')
+    select.classList.add('selectskill')
+
+    let progressRings = content.querySelectorAll('.progress-ring');
+    
+    let ringResolution = window.matchMedia('(max-width: 640px)')
+
+    for (let progressRing of progressRings) {
+        setupCircle(progressRing, ringResolution)
+        ringResolution.addListener( function(changed) { setupCircle(progressRing, ringResolution) });
+    }
+}
+
+function setupCircle(ProgessRing, RingResolution) {
+    let circle = ProgessRing.querySelector('.progress-ring-circle')
+    let percentage = ProgessRing.id.replace('sk-','')
+
+    if (RingResolution.matches) {
+        circle.setAttribute("r", 45);
+        circle.setAttribute("cx", 50);
+        circle.setAttribute("cy", 50);
+    } else {
+        circle.setAttribute("r", 90);
+        circle.setAttribute("cx", 100);
+        circle.setAttribute("cy", 100);
     }
 
+    let radius = circle.r.baseVal.value
+    let circumference = radius * 2 * Math.PI
+    let offset = circumference - percentage / 100 * circumference
 
-    //Select a skillpage from the skill tabs and update skill-rings
-    function selectskill(select)
-    {
-        let content = document.getElementById(select.id.replace('select-','content-'))
-        let skillselects = document.querySelectorAll("#skills-select h3")
-        let skillcontents = document.querySelectorAll(".skill-content")
+    circle.style.strokeDasharray = circumference + "," + circumference
+    circle.style.strokeDashoffset = circumference
 
-        for (let skillcontent of skillcontents) {
-            skillcontent.classList.add('hideskill')
-        }
+    setTimeout(function() { circle.style.strokeDashoffset = offset; }, 10)
+}
 
-        for (let skillselect of skillselects) {
-            skillselect.classList.remove('selectskill')
-        }
+function setupConsole() {
 
-        content.classList.remove('hideskill')
-        select.classList.add('selectskill')
+    let consoleLines = document.querySelectorAll(".global-listskill li")
+    for (let consoleLine of consoleLines) { consoleLine.classList.add("unwrited") }
 
-        let progressrings = content.querySelectorAll('.progress-ring');
-        for (let progressring of progressrings)
-        {
-            let circle = progressring.querySelector('.progress-ring-circle')
-            let percentage = progressring.id.replace('sk-','')
-            let mq = window.matchMedia('(max-width: 640px)')
+    let Delay = 1500
+    writeConsole(consoleLines, Delay)
+    setInterval(function() { writeConsole(consoleLines, Delay) }, (consoleLines.length+1)*Delay)
+}
 
-            if(mq.matches) {
-                circle.setAttribute("r", 45);
-                circle.setAttribute("cx", 50);
-                circle.setAttribute("cy", 50);
-            }
-            else
-            {
-                circle.setAttribute("r", 90);
-                circle.setAttribute("cx", 100);
-                circle.setAttribute("cy", 100);
-            }
-
-            let radius = circle.r.baseVal.value
-            let circumference = radius * 2 * Math.PI
-            let offset = circumference - percentage / 100 * circumference
-
-            circle.style.strokeDasharray = circumference + "," + circumference
-            circle.style.strokeDashoffset = circumference
-
-            setTimeout(function(){
-                circle.style.strokeDashoffset = offset;
-            },10)
-
-            mq.addListener(function(changed) {
-                if(mq.matches) {
-                    circle.setAttribute("r", 45);
-                    circle.setAttribute("cx", 50);
-                    circle.setAttribute("cy", 50);
-                }
-                else
-                {
-                    circle.setAttribute("r", 90);
-                    circle.setAttribute("cx", 100);
-                    circle.setAttribute("cy", 100);
-                }
-
-                let radius = circle.r.baseVal.value
-                let circumference = radius * 2 * Math.PI
-                let offset = circumference - percentage / 100 * circumference
-
-
-                circle.style.strokeDasharray = circumference + "," + circumference
-                circle.style.strokeDashoffset = circumference
-
-                setTimeout(function(){
-                    circle.style.strokeDashoffset = offset;
-                },10)
-            })
+function writeConsole(ConsoleLines, Delay) {
+    for (let i in ConsoleLines) {
+        if (i < ConsoleLines.length) {
+            setTimeout(function() {
+                ConsoleLines[i].classList.toggle("unwrited")
+                ConsoleLines[i].classList.toggle("writed")
+            }, i * Delay)
         }
     }
+}
 
-    //Console part
-    let consolelines = document.querySelectorAll(".global-listskill li")
-
-    for (let consoleline of consolelines)
-    {
-        consoleline.classList.add("unwrited")
-    }
-
-    for (let i in consolelines)
-    {
-        if (i <= 4)
-        {
-            setTimeout(function(){
-                consolelines[i].classList.toggle("unwrited")
-                consolelines[i].classList.toggle("writed")
-            },i * 1500)
-        }
-    }
-
-    setInterval(function(){
-
-        for (let i in consolelines)
-        {
-            if (i <= 4)
-            {
-                setTimeout(function(){
-                    consolelines[i].classList.toggle("unwrited")
-                    consolelines[i].classList.toggle("writed")
-                },i * 1500)
-            }
-        }
-
-    },8500)
-
-    //Carousel of projects
+function setupProjects() {
+        //Carousel of projects
     let Carousel = document.getElementById('projectcarousel')
     Carousel.classList.add('hideCarousel')
 
@@ -377,6 +370,8 @@ document.addEventListener("DOMContentLoaded", function(){
         infosprojects[id].classList.remove('hideproject')
     }
 
+}
+    
 });
 
 
