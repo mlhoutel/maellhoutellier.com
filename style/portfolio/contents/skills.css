@@ -1,5 +1,5 @@
 #div-skills {
-	background-color: var(--c-white);
+	background-color: var(--primary-bg);
 	padding-top: 20px;
 	padding-bottom: 40px;
 	padding-left: 40px;
@@ -8,7 +8,7 @@
 #div-skills h1 {
 	font-family: RobotoMedium;
 	font-size: 3em;
-	border-bottom: 2px solid var(--c-orange);
+	border-bottom: 2px solid var(--primary-nav);
 	width: 90%;
 	margin: 30px;
 }
@@ -45,7 +45,7 @@
 #skills-select {
 
 	border-radius: 20px 20px 0 0;
-	background-color: var(--c-orange);
+	background-color: var(--primary-nav);
 }
 
 #skills-select h3 {
@@ -74,9 +74,9 @@
 	right: 0px;
 	left: 0px;
 
-	background-color: var(--c-grey);
+	background-color: var(--secondary-dark);
 	padding: 20px;
-	color: var(--c-white);
+	color: var(--primary-bg);
 }
 
 .skillwrapper {	
@@ -120,8 +120,8 @@
 }
 
 .selectskill {
-	background-color: var(--c-grey);
-	color: var(--c-white);
+	background-color: var(--secondary-dark);
+	color: var(--primary-bg);
 	border-radius: 20px 20px 0 0;
 }
 .hideskill {
@@ -130,28 +130,28 @@
 }
 
 .pastelR {
-	color: #ffb3ba;
-	stroke: #ffb3ba;
+	color: var(--pastel-A);
+	stroke: var(--pastel-A);
 }
 .pastelO {
-	color: #ffdfba;
-	stroke: #ffdfba;
+	color: var(--pastel-B);
+	stroke: var(--pastel-B);
 }
 .pastelY {
-	color: #ffffba;
-	stroke: #ffffba;
+	color: var(--pastel-C);
+	stroke: var(--pastel-C);
 }
 .pastelG {
-	color: #baffc9;
-	stroke: #baffc9;
+	color: var(--pastel-D);
+	stroke: var(--pastel-D);
 }
 .pastelB {
-	color: #bae1ff;
-	stroke: #bae1ff;
+	color: var(--pastel-E);
+	stroke: var(--pastel-E);
 }
 .pastelV {
-	color: #cc9af4;
-	stroke: #cc9af4;
+	color: var(--pastel-F);
+	stroke: var(--pastel-F);
 }
 
 #skills-global {
@@ -194,7 +194,7 @@
 
 #skills-languages {
 	margin-top: 20px;
-	background-color: var(--c-grey);
+	background-color: var(--secondary-dark);
 	border-radius: 20px 20px 0 0;
 	padding-bottom: 20px;
 }
@@ -202,12 +202,12 @@
 #skills-languages h2 {
 	text-align: center;
 	padding: 10px;
-	color: black;
+	color: var(--primary-text);
 	font-size: 1.4em;
 	font-family: RobotoLight;
 
 	border-radius: 20px 20px 0 0;
-	background-color: var(--c-orange);;
+	background-color: var(--primary-nav);
 }
 
 .languages-listskill {
@@ -223,17 +223,17 @@
 }
 
 .langF {
-	background-color: #bae1ff;
+	background-color: var(--pastel-E);
 	width: 80%;
 }
 
 .langA {
-	background-color: #ffdfba;
+	background-color: var(--pastel-B);
 	width: 65%;
 }
 
 .langI {
-	background-color: #baffc9;
+	background-color: var(--pastel-D);
 	width: 35%;
 }
 

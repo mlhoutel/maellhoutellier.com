@@ -1,15 +1,15 @@
 #div-projects {
-	background-color: var(--c-charon);
+	background-color: var(--secondary-elem);
 	padding-top: 20px;
 	padding-bottom: 40px;
 	padding-left: 40px;
 }
 
 #div-projects h1 {
-	color: var(--c-white);
+	color: var(--primary-bg);
 	font-family: RobotoMedium;
 	font-size: 3em;
-	border-bottom: 2px solid var(--c-orange);
+	border-bottom: 2px solid var(--primary-nav);
 	width: 90%;
 	margin: 30px;
 }
@@ -58,8 +58,8 @@
 	font-size: 2em;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	background-color: var(--c-white);
-	border-bottom: 5px solid var(--c-black);
+	background-color: var(--primary-bg);
+	border-bottom: 5px solid var(--primary-dark);
 
 	margin-bottom: 10px;
 }
@@ -102,13 +102,13 @@
 .project h2 {
 	font-family: RobotoLight;
 	font-size: 2em;
-	color: var(--c-white);
+	color: var(--primary-bg);
 	z-index: 10;
 	text-align: center;
 }
 
 .projectfilter {
-	background: radial-gradient(transparent , black);
+	background: radial-gradient(transparent , var(--primary-text));
 	display: block;
 	position: absolute;
 
@@ -120,7 +120,7 @@
 }
 
 .projectfilter div {
-	background-color: black;
+	background-color: var(--primary-dark);
 
 	opacity: 0.7;
 	transition: all 0.5s ease;
@@ -138,7 +138,8 @@
 }
 
 #projectcarousel {
-	background-color: rgba(0,0,0,0.8);
+	opacity: 1;
+	background-color: var(--primary-dark);
 
 	position: fixed;
 	top: 0px;
@@ -151,7 +152,7 @@
 
 .projectinfo {
 	overflow-x:scroll;
-	background-color: var(--c-orange);
+	background-color: var(--primary-nav);
 	margin-top: 10vh;
 	width: 100%;
 	height: 80%;
@@ -170,8 +171,8 @@
 
 #buttonright ,#buttonleft, #buttonquit {
 	border: none;
-	background-color: var(--c-white);
-	color: black;	
+	background-color: var(--primary-bg);
+	color: var(--primary-text);	
 	transition: background-color 0.5s ease;
 
 	font-size: 1.8em;
@@ -181,8 +182,8 @@
 }
 
 #buttonright:hover ,#buttonleft:hover, #buttonquit:hover {
-	background-color: var(--c-black);
-	color: var(--c-white);
+	background-color: var(--primary-dark);
+	color: var(--primary-bg);
 }
 
 
@@ -257,7 +258,7 @@
 
 	height: 60vh;
 	margin-right: 10vh;
-	background-color: var(--c-white);
+	background-color: var(--primary-bg);
 	border-radius: 20px;
 	font-size: 1.2em;
 }
@@ -289,9 +290,9 @@
 .projectlinks a {
 	margin: 3px;
 	display: inline-block;
-	color: var(--c-white);
+	color: var(--primary-bg);
 	padding: 10px;
-	background-color: var(--c-black);
+	background-color: var(--primary-dark);
 	border-radius: 20px;
 	text-decoration:none;
 }
@@ -350,7 +351,7 @@
 
 	#buttonright ,#buttonleft {
 		background-color: transparent;
-		color: var(--c-orange);
+		color: var(--primary-nav);
 		font-size: 3em;
 	}
 

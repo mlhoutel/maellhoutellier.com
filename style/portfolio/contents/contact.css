@@ -1,5 +1,5 @@
 #div-contact {
-	background-color: var(--c-white);
+	background-color: var(--primary-bg);
 	padding: 20px 60px 20px;
 	margin-bottom: 200px;
 }
@@ -7,7 +7,7 @@
 #div-contact h1 {
 	font-family: RobotoMedium;
 	font-size: 3em;
-	border-bottom: 2px solid var(--c-orange);
+	border-bottom: 2px solid var(--primary-nav);
 	margin-bottom: 10px;
 }
 
@@ -26,14 +26,14 @@
 	background-color: red;
 	padding: 0px 0px 20px 20px;
 	border-radius: 20px;
-	background-color: var(--c-grey);
+	background-color: var(--secondary-dark);
 
     padding-left: 10px;
     padding-right: 10px;
 }
 
 #contact-table h2 {
-	color: var(--c-orange);
+	color: var(--primary-nav);
 	padding: 5px;
 	margin-top: 20px;
 	font-family: RobotoRegularItalic;
@@ -49,9 +49,9 @@
     white-space: nowrap;
     margin-right: 10px;
     margin-top: 3px;
-	border: 3px solid var(--c-orange);
+	border: 3px solid var(--primary-nav);
 	border-radius: 10px;
-	background-color: var(--c-white);
+	background-color: var(--primary-bg);
 }
 
 .contact:hover i{
@@ -66,19 +66,19 @@
 	font-size: 1.2em;
 	padding-left: 20px;
 	font-family: RobotoMediumItalic;
-	color: black;
+	color: var(--primary-text);
 }
 
 .contact i {
 	text-align: center;
 	width: 30px;
 	font-size: 1.6em;
-	color: var(--c-grey);
+	color: var(--secondary-dark);
 	padding: 15px;
-	background-color: var(--c-orange);
+	background-color: var(--primary-nav);
 	padding-right: 80%;
 
-	text-shadow: var(--c-white) 2px 2px; 
+	text-shadow: var(--primary-bg) 2px 2px; 
 	transition: padding 0.5s ease;
 	border-radius: 10px;
 }
@@ -92,7 +92,7 @@
 	margin-top: 10px;
 	font-family: RobotoMedium;
 	font-size: 1.8em;
-	text-shadow: 12px -12px var(--c-brown);
+	text-shadow: 12px -12px var(--secondary-nav);
 }
 
 #references ul {
@@ -102,7 +102,7 @@
 #references li {
 	margin: 3px;
 	padding: 10px;
-	background-color: var(--c-beige);
+	background-color: var(--secondary-bg);
 	border-radius: 20px;
 }
 
@@ -114,9 +114,9 @@
 #references li a {
 	margin: 3px;
 	display: inline-block;
-	color: var(--c-white);
+	color: var(--primary-bg);
 	padding: 10px;
-	background-color: var(--c-black);
+	background-color: var(--primary-dark);
 	border-radius: 20px;
 	text-decoration:none;
 

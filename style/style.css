@@ -19,7 +19,8 @@ html {
 }
 
 body {
-    cursor: url("../ressources/cursors/cursor.png"), auto;
+    color: var(--primary-text);
+    /*cursor: url("../ressources/cursors/cursor.png"), auto;*/
     transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
@@ -45,6 +46,26 @@ html { -ms-overflow-style: none; }
 
     --c-blue: #124559;      /* Blue     [18;  69;  89]  */
     --c-charon: #598392;    /* Charon   [89; 131; 146]  */
+
+    --c-pastel-pink: #FFB3BA;
+    --c-pastel-sand: #FFDFBA;
+    --c-pastel-yellow: #FFFFBA;
+    --c-pastel-green: #BAFFC9;
+    --c-pastel-blue: #BAE1FF;
+    --c-pastel-violet: #CC9AF4;
+
+    --c-darker: #1E2722;
+    --c-dark: #282c34;
+    --c-light: #282c34;
+
+    --c-theme-light: #F4F0EB;
+    --c-theme-dark: #1E2722;
+    --c-theme-solarize: #BAFFC9;
+}
+
+.solar {
+    --c-theme-solarize: #FFB528;
+    --c-orange: #BAFFC9;
 }
 
 .light {
@@ -57,44 +78,44 @@ html { -ms-overflow-style: none; }
     --primary-dark: var(--c-black);
     --secondary-dark: var(--c-grey);
 
+    --text-nav: var(--c-white);
     --primary-nav: var(--c-orange);
     --secondary-nav: var(--c-brown);
 
     --primary-elem: var(--c-blue);
     --secondary-elem: var(--c-charon);
 
-    /*--bg-nav: linear-gradient(to right, var(--c-black), var(--c-white));*/
+    --pastel-A: var(--c-pastel-pink);
+    --pastel-B: var(--c-pastel-sand);
+    --pastel-C: var(--c-pastel-yellow);
+    --pastel-D: var(--c-pastel-green);
+    --pastel-E: var(--c-pastel-blue);
+    --pastel-F: var(--c-pastel-violet);
 }
 
 .dark {
-    --primary-text: var(--c-black);
-    --secondary-text: var(--c-beige);
+    --primary-text: var(--c-white);
+    --secondary-text: var(--c-light);
 
-    --primary-bg: var(--c-white);
-    --secondary-bg: var(--c-beige);
+    --primary-bg: var(--c-black);
+    --secondary-bg: var(--c-dark);
 
-    --primary-dark: var(--c-black);
-    --secondary-dark: var(--c-grey);
+    --primary-dark: var(--c-darker);
+    --secondary-dark: var(--c-light);
 
-    --primary-nav: var(--c-orange);
-    --secondary-nav: var(--c-brown);
+    --text-nav: var(--c-white);
+    --primary-nav: var(--c-dark);
+    --secondary-nav: var(--c-light);
 
-    --primary-elem: var(--c-blue);
-    --secondary-elem: var(--c-charon);
-}
+    --primary-elem: var(--c-orange);
+    --secondary-elem: var(--pastel-D);
 
-.solar {
-    --c-black: #1F272D;     /* Black    [31;  39;  45]  */
-    --c-grey: #24313A;      /* Grey     [36;  49;  58]  */
-    --c-white: #F4F0EB;     /* White    [244; 240; 235] */
-
-    --c-orange: #FFB528;    /* Orange   [255; 181; 40]  */
-
-    --c-brown: #C6AC8F;     /* Brown    [198; 172; 143] */
-    --c-beige: #E2D0BE;     /* Beige    [226; 208; 190] */
-
-    --c-blue: #124559;      /* Blue     [18;  69;  89]  */
-    --c-charon: #598392;    /* Charon   [89; 131; 146]  */
+    --pastel-A: var(--c-pastel-pink);
+    --pastel-B: var(--c-pastel-sand);
+    --pastel-C: var(--c-pastel-yellow);
+    --pastel-D: var(--c-pastel-green);
+    --pastel-E: var(--c-pastel-blue);
+    --pastel-F: var(--c-pastel-violet);
 }
 
 /*--------------------------------------------------------------------*/

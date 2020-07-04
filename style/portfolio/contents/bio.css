@@ -1,5 +1,5 @@
 #div-bio {
-	background-color: var(--c-beige);
+	background-color: var(--secondary-bg);
 	padding-top: 20px;
 	padding-bottom: 40px;
 	padding-left: 40px;
@@ -8,7 +8,7 @@
 #div-bio h1 {
 	font-family: RobotoMedium;
 	font-size: 3em;
-	border-bottom: 2px solid var(--c-orange);
+	border-bottom: 2px solid var(--primary-nav);
 	width: 90%;
 	margin: 30px;
 }
@@ -29,7 +29,15 @@
 	padding-bottom: 20px;
 
 	font-size: 2em;
-	text-shadow: 5px 5px var(--c-white);
+	text-shadow: 5px 5px var(--primary-bg);
+}
+
+#bio-table circle {
+	fill: var(--primary-nav);
+}
+
+#bio-table rect {
+	fill: var(--secondary-bg);
 }
 
 #bio-studies {
@@ -53,14 +61,14 @@
 	padding-bottom: 10px;
 	margin-top: 10px;
 
-	border-left: 6px solid var(--c-black);
+	border-left: 6px solid var(--primary-dark);
 	margin-left: -18px;
 }
 
 #bio-studies ul li p{
 	margin-left: -18px;
 	padding-left: 30px;
-	border-left: 6px solid var(--c-black);
+	border-left: 6px solid var(--primary-dark);
 }
 
 #bio-jobs {
@@ -74,7 +82,7 @@
 
 #bio-jobs svg {
 	position: absolute;
-	transform: translateX(-30px)
+	transform: translateX(-30px) translateY(-2px);
 }
 
 #bio-jobs ul li h3 {
@@ -85,14 +93,14 @@
 	padding-bottom: 10px;
 	margin-top: 10px;
 
-	border-left: 6px solid var(--c-black);
+	border-left: 6px solid var(--primary-dark);
 	margin-left: -18px;
 }
 
 #bio-jobs ul li p{
 	margin-left: -18px;
 	padding-left: 30px;
-	border-left: 6px solid var(--c-black);
+	border-left: 6px solid var(--primary-dark);
 }
 
 /*--------------------------------------------------------------------*/
@@ -115,7 +123,7 @@
 	}
 
 	#bio-jobs svg {
-		transform: translateX(0px)
+		transform: translateX(0px) translateY(-2px);
 	}
 
 	#bio-jobs svg, #bio-studies svg {

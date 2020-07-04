@@ -1,11 +1,11 @@
 #div-about {
-	background-color: var(--c-white);
+	background-color: var(--primary-bg);
 }
 
 #div-about h1 {
 	font-family: RobotoMedium;
 	font-size: 3em;
-	border-bottom: 2px solid var(--c-orange);
+	border-bottom: 2px solid var(--primary-nav);
 	width: 90%;
 	margin-bottom: 10px;
 }
@@ -24,12 +24,11 @@
 #about-image {
 
 	width: 40%;
-	background-color: var(--c-orange);
+	background-color: var(--primary-nav);
 	padding: 20px;
 
-
 	border-radius: 25px 0px 25px 0px;
-	border-right: 20px solid var(--c-black);
+	border-right: 20px solid var(--primary-dark);
 }
 
 #image-div {
@@ -55,7 +54,7 @@
 	font-family: RobotoMedium; 
 	font-size: 2em;
 
-	border-bottom: 2px solid var(--c-black);
+	border-bottom: 2px solid var(--primary-dark);
 }
 
 #about-image p {
@@ -78,15 +77,14 @@
 
 #about-content p {
 	font-size: 1.2em;
-	padding-bottom: 10px;
 	padding-left: 10px;
-	border-left: 2px solid black;
+	border-left: 4px solid var(--primary-text);
 	text-align: justify;
 }
 
 #about-content ul {
 	list-style: none;
-	padding-left: 20px;
+	padding-left: 0px;
 }
 
 #about-content ul li {
@@ -101,8 +99,9 @@
 
 #about-content ul li i {
 	font-size: 1.6em;
-	color: var(--c-orange);
+	color: var(--primary-nav);
 }
+
 /*--------------------------------------------------------------------*/
 /*                       All : width < 1050px                         */
 /*--------------------------------------------------------------------*/
