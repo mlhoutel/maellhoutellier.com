@@ -8,6 +8,11 @@
 	font-family: RobotoLight;
 }
 
+a {
+    color: currentColor;
+    text-decoration: none;
+}   
+
 html {
     max-width: 100%;
     overflow-x: hidden;
@@ -46,8 +51,8 @@ html { -ms-overflow-style: none; }
 /*--------------------------------------------------------------------*/
 
 :root {
+    
     --i-switchbk: url("../../ressources/images/Switchbackground.jpg"); /* From home.css */
-    --i-code: url("../../../ressources/images/Code.jpg");
 }
 /*--------------------------------------------------------------------*/
 /*                            Roboto Font                             */

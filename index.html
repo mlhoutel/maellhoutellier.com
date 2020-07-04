@@ -21,7 +21,7 @@
   	<script src="script/main.js"></script>
 </head>
 
-<body>
+<body class="light">
 	<section id="home">
 		<div id="home-bar">
 			<div id="home-content">
@@ -41,11 +41,26 @@
 			</div>
 
 			<nav id="home-navbar">
-				<ul>
+				<ul id="home-navbar-holder">
 					<li class="home-navbar-button"><a href="">PORTFOLIO</a></li>
 					<li class="home-navbar-button"><a href="">PROJECTS</a></li>
-					<li class="home-navbar-button"><a href="">ARTICLES</a></li>
 					<li class="home-navbar-button"><a href="">ABOUT</a></li>
+					<li class="home-navbar-theme">
+						<a href="#">
+							<i class="fas fa-adjust"></i>
+						</a>
+						<ul class="theme-dropdown">
+							<li class="theme-dropdown-item">
+								<a id="light" href="#">light</a>
+							</li>
+							<li class="theme-dropdown-item">
+								<a id="dark" href="#">dark</a>
+							</li>
+							<li class="theme-dropdown-item">
+								<a id="solar" href="#">solar</a>
+							</li>
+						</ul>
+					</li>
 					<li class="home-navbar-flags">
 						<div id="flag-fr"><img src="ressources\flags\fr.svg"></div>
 						<div id="flag-en"><img src="ressources\flags\sh.svg"></div>
@@ -64,8 +79,6 @@
 				</div>				
 				<div id="menu-background">
 					<div id="menu-content">
-						<h2>SWITCH MENU </h2>
-						<h2>(Currently in Dev)</h2>
 					</div>
 				</div>
 			</div>
@@ -192,7 +205,7 @@
 								<rect width="30" height="40" fill="#E2D0BE"></rect>
 								<circle cx="15" cy="15" r="12" fill="#FFB528"></circle>
 							</svg>
-							<h3><i class="fas fa-keyboard"></i> 2020: CEA Research Center - Internship (3 months)</h3>
+							<h3><i class="fas fa-atom"></i> 2020: CEA Research Center - Internship (3 months)</h3>
 							<p>\ Analysis, compilation and development of Prismatic, an atomic simulation software for scanning transmission electron microscopy (STEM).</p>
 							<p>CEA (LEMMA Department), Grenoble, France </p>
 						</li>

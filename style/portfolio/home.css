@@ -160,11 +160,13 @@
 	z-index: 50;
 }
 
-#home-navbar ul {
+#home-navbar-holder {
+	color: var(--c-white);
 	background-color: var(--c-black);
 
+	width: calc(100vw - 320px);
 	list-style-type: none;
-	overflow: hidden;
+	
 	z-index: 50;
 	top: 23px;
 	left: 284px;
@@ -179,8 +181,8 @@
 }
 
 .home-navbar-button {
+	width: auto;
 	float: left;
-	width: calc(16.67vw - 60px);
 }
 
 .home-navbar-button a {
@@ -210,9 +212,66 @@
 	background-color: var(--c-grey);
 }
 
+.home-navbar-theme {
+	background-color: var(--c-grey);
+	float: right;
+	height: 47px;
+	text-align: center;
+	width: 40px;
+}
+
+.home-navbar-theme a {
+	display: block;
+	text-align: center;
+  	height: 100%;
+  	width: 100%;
+}
+
+.home-navbar-theme a i {
+	position:relative;
+    top: 25%;	
+
+    -moz-transform: skew(-15deg, 0deg);
+	-webkit-transform: skew(-15deg, 0deg);
+	-o-transform: skew(-15deg, 0deg);
+	-ms-transform: skew(-15deg, 0deg);
+	transform: skew(-15deg, 0deg);
+}
+
+.theme-dropdown {
+	position: absolute;
+	right: 0px;
+	width: 400px;
+	opacity: 0;
+
+	z-index: 60;
+	background: var(--c-blue);
+	border-top: 2px solid var(--c-white);
+
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 1rem;
+	margin-top: 0px;
+	padding:0.5rem;
+
+	transition: opacity 0.15s ease-out;
+}
+
+.home-navbar-theme:focus-within .theme-dropdown {
+	opacity: 1;
+	pointer-events: auto;
+}
+
 .home-navbar-flags {
+	overflow: hidden;
+	height: 47px;
+	float: right;
+	transition: width 0.2s ease;
 	background-color: var(--c-black);
-	float: left;
 	width: 250px;
 }
 
@@ -458,14 +517,11 @@
 /*--------------------------------------------------------------------*/
 @media only screen and (max-width: 1250px) {
 
-	#home-navbar ul {
-		width: 250px;
+	.home-navbar-flags {
+		background-color: var(--c-black);
+		float: right;
+		width: 90px;
 	}
-
-	#home-navbar ul li a {
-		display: none;
-	}
-
 
 	#switch-menu {
 		display: none;
@@ -482,6 +538,8 @@
 	}
 
 	#switch-content div {
+
+		clip-path: polygon(100% 100%, 100% 0%, 50% 4%, 0% 0%, 0% 100%);
 		width: 100vw;
 		top: 100px;
 		left: 0px;
@@ -491,10 +549,20 @@
 	#div-home {
 		position: absolute;
 		left: 0px;
-		padding: 100px 10px 0px 10px;
+		padding: 140px 10px 0px 10px;
 	}
 }
 
+
+/*--------------------------------------------------------------------*/
+/*                       All : width < 700px                         */
+/*--------------------------------------------------------------------*/
+@media only screen and (max-width: 800px) {
+
+	.home-navbar-button a {
+		display: none;
+	}
+}
 
 /*--------------------------------------------------------------------*/
 /*                       All : height < 800 px                         */
@@ -520,6 +588,7 @@
 		font-size: 1em;
 	}
 }
+
 
 /*--------------------------------------------------------------------*/
 /*                       All : height < 625 px                         */
@@ -592,5 +661,6 @@
 	#home {
 		height: 620px;
 	}
+
 }
 
