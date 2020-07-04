@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var MenuSwitched = false
 
     // Global Content Vars
-    let content = document.getElementById('content')
+    const content = document.getElementById('content')
+
+    // Setup the button themes
+    setupThemes()
 
     // Initialize the functions for the Switch-menu
     menuSlider(MenuSwitched)
@@ -32,7 +35,49 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setupProjects()
 
-    
+function setupThemes() {
+
+    // Detect Buttons
+    const lightButton = document.getElementById('light');
+    const darkButton = document.getElementById('dark');
+    const solarButton = document.getElementById('solar');
+    const body = document.body;
+
+    // Cached Theme
+    const theme = localStorage.getItem('theme');
+    const isSolar = localStorage.getItem('isSolar');
+
+    if (theme) {
+        body.classList.add(theme);
+        isSolar && body.classList.add('solar');
+    }
+
+
+    // Event Handler
+    lightButton.onclick = function() {
+        body.classList.replace('dark', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+
+    darkButton.onclick = function() {
+        body.classList.replace('light', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+
+    solarButton.onclick = function() {
+        if(body.classList.contains('solar')) {
+            body.classList.remove('solar')
+            solarButton.innerText = 'solarize';
+            localStorage.removeItem('isSolar');
+        } else {
+            body.classList.add('solar')
+            solarButton.innerText = 'normalize';
+            localStorage.setItem('isSolar','true');
+        }
+    }
+
+}   
+
 function loadCSS(stylesheetId, stylesheetLink) {
 
     let head  = document.getElementsByTagName('head')[0];
@@ -51,7 +96,7 @@ function loadCSS(stylesheetId, stylesheetLink) {
 
 function autoScroll() {
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#/^[a-z0-9]+$/i"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 

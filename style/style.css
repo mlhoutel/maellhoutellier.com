@@ -20,6 +20,7 @@ html {
 
 body {
     cursor: url("../ressources/cursors/cursor.png"), auto;
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 /*
@@ -46,6 +47,56 @@ html { -ms-overflow-style: none; }
     --c-charon: #598392;    /* Charon   [89; 131; 146]  */
 }
 
+.light {
+    --primary-text: var(--c-black);
+    --secondary-text: var(--c-beige);
+
+    --primary-bg: var(--c-white);
+    --secondary-bg: var(--c-beige);
+
+    --primary-dark: var(--c-black);
+    --secondary-dark: var(--c-grey);
+
+    --primary-nav: var(--c-orange);
+    --secondary-nav: var(--c-brown);
+
+    --primary-elem: var(--c-blue);
+    --secondary-elem: var(--c-charon);
+
+    /*--bg-nav: linear-gradient(to right, var(--c-black), var(--c-white));*/
+}
+
+.dark {
+    --primary-text: var(--c-black);
+    --secondary-text: var(--c-beige);
+
+    --primary-bg: var(--c-white);
+    --secondary-bg: var(--c-beige);
+
+    --primary-dark: var(--c-black);
+    --secondary-dark: var(--c-grey);
+
+    --primary-nav: var(--c-orange);
+    --secondary-nav: var(--c-brown);
+
+    --primary-elem: var(--c-blue);
+    --secondary-elem: var(--c-charon);
+}
+
+.solar {
+    --c-black: #1F272D;     /* Black    [31;  39;  45]  */
+    --c-grey: #24313A;      /* Grey     [36;  49;  58]  */
+    --c-white: #F4F0EB;     /* White    [244; 240; 235] */
+
+    --c-orange: #FFB528;    /* Orange   [255; 181; 40]  */
+
+    --c-brown: #C6AC8F;     /* Brown    [198; 172; 143] */
+    --c-beige: #E2D0BE;     /* Beige    [226; 208; 190] */
+
+    --c-blue: #124559;      /* Blue     [18;  69;  89]  */
+    --c-charon: #598392;    /* Charon   [89; 131; 146]  */
+}
+
 /*--------------------------------------------------------------------*/
 /*                        Images References                           */
 /*--------------------------------------------------------------------*/
@@ -53,6 +104,7 @@ html { -ms-overflow-style: none; }
 :root {
     
     --i-switchbk: url("../../ressources/images/Switchbackground.jpg"); /* From home.css */
+    --i-code: url("../../../ressources/images/Code.jpg");
 }
 /*--------------------------------------------------------------------*/
 /*                            Roboto Font                             */
