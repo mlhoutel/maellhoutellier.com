@@ -241,9 +241,8 @@
 .theme-dropdown {
 	position: absolute;
 	right: 0px;
-	width: 400px;
-	opacity: 0;
-
+	width: 300px;
+	
 	z-index: 60;
 	background: var(--c-blue);
 	border-top: 2px solid var(--c-white);
@@ -258,12 +257,17 @@
 	margin-top: 0px;
 	padding:0.5rem;
 
-	transition: opacity 0.15s ease-out;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s ease 0.5s, opacity 0.5s ease;
 }
 
 .home-navbar-theme:focus-within .theme-dropdown {
-	opacity: 1;
 	pointer-events: auto;
+
+	visibility: visible;
+	opacity: 1;
+	transition-delay:0s;
 }
 
 .home-navbar-flags {
@@ -517,12 +521,6 @@
 /*--------------------------------------------------------------------*/
 @media only screen and (max-width: 1250px) {
 
-	.home-navbar-flags {
-		background-color: var(--c-black);
-		float: right;
-		width: 90px;
-	}
-
 	#switch-menu {
 		display: none;
 	}
@@ -555,9 +553,9 @@
 
 
 /*--------------------------------------------------------------------*/
-/*                       All : width < 700px                         */
+/*                       All : width < 950px                         */
 /*--------------------------------------------------------------------*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 950px) {
 
 	.home-navbar-button a {
 		display: none;
