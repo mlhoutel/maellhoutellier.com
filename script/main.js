@@ -123,7 +123,7 @@ function loadCSS(stylesheetId, stylesheetLink) {
 
 function autoScroll() {
 
-    document.querySelectorAll('a[href^="#/^[a-z0-9]+$/i"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#div"').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
