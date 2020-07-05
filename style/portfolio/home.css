@@ -75,7 +75,7 @@
 	font-family: RobotoMediumItalic;
 	font-size: 1em;
 
-	text-shadow: 0px 5px 0px var(--secondary-dark);
+	text-shadow: 0px 5px 0px var(--primary-text);
 }
 
 #home-content-title-M {
@@ -84,7 +84,7 @@
 	font-size: 1.6em;
 
 	letter-spacing: 5px;
-	text-shadow: 20px -5px 0px var(--primary-bg);
+	text-shadow: 20px -5px 0px var(--text-nav);
 
 	-moz-transform: skew(15deg, 0deg);
 	-webkit-transform: skew(15deg, 0deg);
@@ -121,7 +121,7 @@
 }
 
 .rect-bar {
-	background-color: var( --primary-dark);
+	background-color: var(--primary-text);
 	display: inline-block;
 	position: absolute;
 	top: 30%;
@@ -181,7 +181,7 @@
 }
 
 .home-navbar-button {
-	width: auto;
+	width: calc(33% - 96px);
 	float: left;
 }
 
@@ -376,9 +376,60 @@
 	transform: rotate(135deg)translateX(50%)translateY(21%);	
 }
 
-#menu-content {
+#locker {
+	border-radius: 10px;
+	background-color: var(--c-black);
 	position: absolute;
-	left: 15vh;
+	height: 70vh;
+	width: 35vh;
+	margin-top: 30px;
+	margin-left: 60px;
+}
+
+#locker-screen {
+	border-radius: 5px;
+	margin: 10px;
+	background-color: var(--c-light);
+
+	height: 60px;
+}
+
+#locker-textholder {
+	color: var(--c-white);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(30%);
+    font-family: RobotoBold;
+    font-size: 1.8em;
+}
+
+#locker-pad {
+	margin: 4px;
+}
+
+.locker-button {
+	font-family: RobotoBold;
+	font-size: 1.2em;
+	height: 50px;
+	width: 10vh;
+	border-radius: 5px;
+	color: var(--c-white);
+	background: var(--c-dark);
+	border: 0px;
+	margin: 3px;
+}
+
+.locker-button:hover {
+	background: var(--c-lighter);
+}
+
+.locker-button:active {
+	background: var(--c-black);
+}
+
+#locker-instructions {
+	font-family: RobotoMedium;
+	padding: 30px;
 }
 
 #switch-menu div {
@@ -390,7 +441,7 @@
 }
 
 .switch-menu-close {
-	left:-40vh;
+	left:-45vh;
 }
 
 /*-------------- Home page switch Second part : HomeDiv --------------*/
@@ -450,7 +501,7 @@
 
 #presentation1 {
 	font-size: 5em;
-	color: var(--primary-nav);
+	color: var(--tertiary-text);
 }
 
 #presentation2 {
@@ -630,8 +681,13 @@
 		height: 354.125px;
 	}
 
-	#menu-content {
-		left: 93.75px;
+	#locker  {
+		height: 440px;
+		width: 220px;
+	}
+
+	.locker-button {
+		width: 63px;
 	}
 
 	.switch-menu-open {
@@ -639,13 +695,13 @@
 	}
 
 	.switch-menu-close {
-		left:-250px;
+		left:-280px;
 	}
 
 	/*-------------- Home page switch Second part : HomeDiv --------------*/
 
 	.switch-content-open {
-		left: 217.75px;
+		left: 250px;
 	}
 
 	#div-home-background {
@@ -653,7 +709,7 @@
 	}
 
 	#div-home-background div {
-		height: 1450px;
+		height: 1250px;
 	}
 
 	#div-home {

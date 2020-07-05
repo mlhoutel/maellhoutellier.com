@@ -35,18 +35,24 @@ html { -ms-overflow-style: none; }
 /*--------------------------------------------------------------------*/
 
 :root {
-    --c-black: #1F272D;     /* Black    [31;  39;  45]  */
-    --c-grey: #24313A;      /* Grey     [36;  49;  58]  */
-    --c-white: #F4F0EB;     /* White    [244; 240; 235] */
 
-    --c-orange: #FFB528;    /* Orange   [255; 181; 40]  */
+    /* DARKS PALETTE */
+    --c-black: #1F272D;
+    --c-grey: #24313A;
+    --c-darker: #1E2722;
+    --c-dark: #282c34;
+    --c-light: #282c34;
+    --c-lighter: #3F434C;
+    --c-white: #F4F0EB;
+    
+    /* COLORS PALETTE */
+    --c-orange: #FFB528;
+    --c-brown: #C6AC8F;
+    --c-beige: #E2D0BE;
+    --c-blue: #124559;
+    --c-charon: #598392;
 
-    --c-brown: #C6AC8F;     /* Brown    [198; 172; 143] */
-    --c-beige: #E2D0BE;     /* Beige    [226; 208; 190] */
-
-    --c-blue: #124559;      /* Blue     [18;  69;  89]  */
-    --c-charon: #598392;    /* Charon   [89; 131; 146]  */
-
+    /* PASTEL PALETTE */
     --c-pastel-pink: #FFB3BA;
     --c-pastel-sand: #FFDFBA;
     --c-pastel-yellow: #FFFFBA;
@@ -54,10 +60,7 @@ html { -ms-overflow-style: none; }
     --c-pastel-blue: #BAE1FF;
     --c-pastel-violet: #CC9AF4;
 
-    --c-darker: #1E2722;
-    --c-dark: #282c34;
-    --c-light: #282c34;
-
+    /* THEMES PALETTE */
     --c-theme-light: #F4F0EB;
     --c-theme-dark: #1E2722;
     --c-theme-solarize: #BAFFC9;
@@ -71,6 +74,7 @@ html { -ms-overflow-style: none; }
 .light {
     --primary-text: var(--c-black);
     --secondary-text: var(--c-beige);
+    --tertiary-text: var(--c-orange);
 
     --primary-bg: var(--c-white);
     --secondary-bg: var(--c-beige);
@@ -84,6 +88,7 @@ html { -ms-overflow-style: none; }
 
     --primary-elem: var(--c-blue);
     --secondary-elem: var(--c-charon);
+    --tertiary-elem: var(--c-orange);
 
     --pastel-A: var(--c-pastel-pink);
     --pastel-B: var(--c-pastel-sand);
@@ -96,6 +101,7 @@ html { -ms-overflow-style: none; }
 .dark {
     --primary-text: var(--c-white);
     --secondary-text: var(--c-light);
+    --tertiary-text: var(--c-orange);
 
     --primary-bg: var(--c-black);
     --secondary-bg: var(--c-dark);

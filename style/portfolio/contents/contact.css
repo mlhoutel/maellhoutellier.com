@@ -23,7 +23,6 @@
 }
 
 .contactdiv {
-	background-color: red;
 	padding: 0px 0px 20px 20px;
 	border-radius: 20px;
 	background-color: var(--secondary-dark);
@@ -40,7 +39,7 @@
 }
 
 .contact {
-	color: white;
+	color: var(--text-nav);
 	text-decoration: none;
 	width: 40vw;
 	display: block;
@@ -73,7 +72,7 @@
 	text-align: center;
 	width: 30px;
 	font-size: 1.6em;
-	color: var(--secondary-dark);
+	color: var(--primary-text);
 	padding: 15px;
 	background-color: var(--primary-nav);
 	padding-right: 80%;

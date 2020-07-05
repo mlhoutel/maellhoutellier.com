@@ -76,7 +76,7 @@
 
 	background-color: var(--secondary-dark);
 	padding: 20px;
-	color: var(--primary-bg);
+	color: var(--text-nav);
 }
 
 .skillwrapper {	
@@ -121,7 +121,7 @@
 
 .selectskill {
 	background-color: var(--secondary-dark);
-	color: var(--primary-bg);
+	color: var(--c-white);
 	border-radius: 20px 20px 0 0;
 }
 .hideskill {

@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the functions for the Switch-menu
     menuSlider(MenuSwitched)
 
+    // Initialize the locker enigma
+    setupLocker()
+
     // Initialize the functions for the Auto-scroll Links 
     autoScroll()
     
@@ -34,6 +37,30 @@ document.addEventListener('DOMContentLoaded', function() {
     setupConsole() 
 
     setupProjects()
+
+function setupLocker() {
+    let lockerCursor = 0;
+    const lockerScreen = document.getElementById('locker-textholder');
+    const lockerButtons = document.querySelectorAll('.locker-button');
+
+    for (let lockerButton of lockerButtons) {
+        lockerButton.addEventListener("click", function() {
+
+            let screenCode = lockerScreen.innerHTML.split("-");
+            screenCode[lockerCursor] = this.value;
+
+            if (lockerCursor < 4) {
+                lockerCursor = lockerCursor + 1;
+                lockerScreen.innerHTML = screenCode[0]+'-'+screenCode[1]+'-'+screenCode[2]+'-'+screenCode[3];
+            } else {
+                lockerCursor = 0; 
+                lockerScreen.innerHTML = 'X-X-X-X'
+            }
+            
+        })
+    }
+    
+}
 
 function setupThemes() {
 
@@ -153,29 +180,30 @@ function menuSlider(Switched) {
     let grip = document.getElementById('grip')
     let menuBackground = document.getElementById('menu-background')
 
-    let list = [grip, switchMenu].forEach(e => {
+    let list = [grip, switchMenu, menuBackground].forEach(e => {
+        e.addEventListener('click', function (event) {
+            if ([grip, switchMenu, menuBackground].includes(event.target)) {
+                if (!Switched) {
+                    Switched = true;
+                    switchMenu.classList.add('animated')
+                    switchContent.classList.add('animated')
 
-        e.addEventListener('click', function () {
-            if (!Switched) {
-                Switched = true;
-                switchMenu.classList.add('animated')
-                switchContent.classList.add('animated')
+                    setTimeout(function() {
+                        if (switchMenu.classList.contains('switch-menu-open')) {
+                            switchMenu.classList.remove('switch-menu-open')
+                            switchMenu.classList.add('switch-menu-close')
+                            switchContent.classList.remove('switch-content-open')
+                            switchContent.classList.add('switch-content-close')
+                        } else {
+                            switchMenu.classList.remove('switch-menu-close')
+                            switchMenu.classList.add('switch-menu-open')
+                            switchContent.classList.remove('switch-content-close')
+                            switchContent.classList.add('switch-content-open')
+                        }
+                    }, 100);
 
-                setTimeout(function() {
-                    if (switchMenu.classList.contains('switch-menu-open')) {
-                        switchMenu.classList.remove('switch-menu-open')
-                        switchMenu.classList.add('switch-menu-close')
-                        switchContent.classList.remove('switch-content-open')
-                        switchContent.classList.add('switch-content-close')
-                    } else {
-                        switchMenu.classList.remove('switch-menu-close')
-                        switchMenu.classList.add('switch-menu-open')
-                        switchContent.classList.remove('switch-content-close')
-                        switchContent.classList.add('switch-content-open')
-                    }
-                }, 100);
-
-                setTimeout(function() { Switched = false }, 500);
+                    setTimeout(function() { Switched = false }, 500);
+                }
             }
         });
     });
