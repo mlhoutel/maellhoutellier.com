@@ -114,7 +114,7 @@ html { -ms-overflow-style: none; }
     --secondary-nav: var(--c-light);
 
     --primary-elem: var(--c-orange);
-    --secondary-elem: var(--pastel-D);
+    --secondary-elem: var(--c-orange);
 
     --pastel-A: var(--c-pastel-pink);
     --pastel-B: var(--c-pastel-sand);

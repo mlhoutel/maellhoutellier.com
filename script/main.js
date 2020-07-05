@@ -52,6 +52,13 @@ function setupLocker() {
             if (lockerCursor < 4) {
                 lockerCursor = lockerCursor + 1;
                 lockerScreen.innerHTML = screenCode[0]+'-'+screenCode[1]+'-'+screenCode[2]+'-'+screenCode[3];
+
+                if (lockerScreen.innerHTML == '6-9-6-9') {
+                    lockerScreen.innerHTML = 'N-I-C-E'
+                } else if (lockerScreen.innerHTML == '4-2-4-2') {
+                    lockerScreen.innerHTML = 'F-A-C-T'
+                }
+
             } else {
                 lockerCursor = 0; 
                 lockerScreen.innerHTML = 'X-X-X-X'

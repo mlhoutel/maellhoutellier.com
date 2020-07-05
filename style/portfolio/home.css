@@ -430,6 +430,7 @@
 #locker-instructions {
 	font-family: RobotoMedium;
 	padding: 30px;
+	color: var(--c-black);
 }
 
 #switch-menu div {

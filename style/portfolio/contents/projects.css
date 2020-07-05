@@ -102,13 +102,13 @@
 .project h2 {
 	font-family: RobotoLight;
 	font-size: 2em;
-	color: var(--primary-bg);
+	color: var(--text-nav);
 	z-index: 10;
 	text-align: center;
 }
 
 .projectfilter {
-	background: radial-gradient(transparent , var(--primary-text));
+	background: radial-gradient(transparent , var(--c-black));
 	display: block;
 	position: absolute;
 
@@ -120,7 +120,7 @@
 }
 
 .projectfilter div {
-	background-color: var(--primary-dark);
+	background-color: var(--c-black);
 
 	opacity: 0.7;
 	transition: all 0.5s ease;
