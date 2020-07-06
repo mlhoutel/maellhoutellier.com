@@ -40,8 +40,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function setupLocker() {
     let lockerCursor = 0;
+    let resetCounter = 0;
     const lockerScreen = document.getElementById('locker-textholder');
     const lockerButtons = document.querySelectorAll('.locker-button');
+    const resetButton = document.getElementById('reset-button');
 
     for (let lockerButton of lockerButtons) {
         lockerButton.addEventListener("click", function() {
@@ -53,20 +55,57 @@ function setupLocker() {
                 lockerCursor = lockerCursor + 1;
                 lockerScreen.innerHTML = screenCode[0]+'-'+screenCode[1]+'-'+screenCode[2]+'-'+screenCode[3];
 
-                if (lockerScreen.innerHTML == '6-9-6-9') {
-                    lockerScreen.innerHTML = 'N-I-C-E'
-                } else if (lockerScreen.innerHTML == '4-2-4-2') {
-                    lockerScreen.innerHTML = 'F-A-C-T'
-                }
+                lockerScreen.innerHTML = Egg(lockerScreen.innerHTML, resetCounter);
 
             } else {
                 lockerCursor = 0; 
-                lockerScreen.innerHTML = 'X-X-X-X'
+                lockerScreen.innerHTML = 'X-X-X-X';
             }
-            
+
+            resetCounter = 0;
         })
     }
+
+    resetButton.addEventListener("click", function() {
+        lockerScreen.innerHTML = 'X-X-X-X';
+        lockerCursor = 0; 
+        resetCounter = EggReset(resetCounter);
+    });
     
+}
+
+function EggReset(resetCounter) {
+
+    const lockerScreen = document.getElementById('locker-textholder');
+
+    if (resetCounter >= 16) {
+        lockerScreen.innerHTML = 'R-O-L-L'; // barrel  
+        document.getElementById('home').classList.add('barrel-roll');
+        return 0;
+    }
+    return resetCounter+1;
+}
+
+function Egg(innerHTML) {
+
+    switch (innerHTML) {
+        case '6-9-6-9': return 'N-I-C-E'; // meme
+        case '4-2-4-2': return 'F-A-C-T'; // meaning
+        case '1-8-0-2': return 'H-U-G-O'; // victor
+        case '9-0-0-0': return 'O-V-E-R'; // sayan
+        case '1-2-3-4': return 'Y-A-M-S'; // sequence
+        case '1-9-8-4': return 'F-R-E-E'; // novlangue
+        case '2-0-2-0': return 'M-E-T-A'; // year
+        case '1-9-6-9': return 'M-O-O-N'; // step
+        case '0-0-0-1': return 'T-R-U-E'; // bool
+        case '0-0-0-0': return 'N-U-L-L'; // false
+        case '2-0-4-8': return 'D-O-G-E'; // dog
+        case '0-3-9-9': return 'F-R-E-E'; // chair
+        case '1-1-1-1':
+            document.getElementById('locker-screen').classList.add('rgba-screen');
+            return 'R-G-B-A'; // chair
+        default: return innerHTML
+    }
 }
 
 function setupThemes() {

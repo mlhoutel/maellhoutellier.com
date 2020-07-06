@@ -384,6 +384,7 @@
 	width: 35vh;
 	margin-top: 30px;
 	margin-left: 60px;
+	overflow: hidden;
 }
 
 #locker-screen {
@@ -427,10 +428,71 @@
 	background: var(--c-black);
 }
 
+#reset-button {
+	font-family: RobotoBold;
+	font-size: 1.2em;
+	height: 50px;
+	width: calc(20vh + 9px);
+	border-radius: 5px;
+	color: var(--c-white);
+	background: var(--c-dark);
+	border: 0px;
+	margin: 3px;
+}
+
+#reset-button:hover {
+	background: var(--c-lighter);
+}
+
+#reset-button:active {
+	background: var(--c-black);
+}
+
 #locker-instructions {
+	background-color: var(--c-grey);
 	font-family: RobotoMedium;
-	padding: 30px;
-	color: var(--c-black);
+	font-size: 1em;
+	padding: 15px;
+	color: var(--c-grey);
+	height: 500px;
+}
+
+@keyframes color-rotate {
+	from {
+		filter: hue-rotate(0deg);
+	} to {
+		filter: hue-rotate(360deg);
+	}
+}
+
+.rgba-screen {
+	animation: color-rotate 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternante;
+}
+
+@-webkit-keyframes roll {
+    from { -webkit-transform: rotate(0deg) }
+    to { -webkit-transform: rotate(360deg) }
+}
+
+@-moz-keyframes roll {
+    from { -moz-transform: rotate(0deg) }
+    to { -moz-transform: rotate(360deg) }
+}
+
+@keyframes roll {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+
+.barrel-roll {
+    -moz-animation-name: roll;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation-name: roll;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
 }
 
 #switch-menu div {
@@ -616,6 +678,7 @@
 		left: 0px;
 		padding: 140px 10px 0px 10px;
 	}
+
 }
 
 
@@ -689,6 +752,15 @@
 
 	.locker-button {
 		width: 63px;
+	}
+
+	#reset-button {
+		width: 132px;
+	}
+
+	#locker-instructions {
+		padding: 10px;
+		font-size: 0.8em;
 	}
 
 	.switch-menu-open {
